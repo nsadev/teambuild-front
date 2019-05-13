@@ -8,5 +8,6 @@ Development started: April, 2019
 
 <dl>
   <dd>Chandler Baskins</dd>
+  <dd>Ryan Johnson</dd>
   <dd>Tamas Knisz</dd>
 </dl>
