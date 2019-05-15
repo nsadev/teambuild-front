@@ -5,7 +5,7 @@ import logo_text from "./static/logo_text.png";
 const Navbar = () => (
   <div className="container navbar">
     <div className="navbar__logo">
-      <img className="navbar__logo__img" src={logo_text} />
+      <img alt="TeamBuild logo" className="navbar__logo__img" src={logo_text} />
     </div>
     <div className="navbar__links">
       <a className="navbar__links__link link link--emphasis" href="#">
