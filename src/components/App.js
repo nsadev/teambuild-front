@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import PreFooter from "./PreFooter";
 import "./App.css";
 
 class App extends React.Component {
@@ -8,6 +9,7 @@ class App extends React.Component {
     return (
       <Fragment>
         <Navbar />
+        <PreFooter />
         <Footer />
       </Fragment>
     );
