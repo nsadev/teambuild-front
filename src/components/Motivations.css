@@ -1,0 +1,50 @@
+.motiv-container {
+    height: 850px;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 300px 50px;
+}
+
+.item-box {
+    position: relative;
+    height: 550px;
+    width: 400px;
+    margin: auto;
+    text-align: center;
+    grid-row: 2;
+
+}
+
+.item-box-left {
+    grid-column: 1 / 1;
+}
+
+.item-box-mid {
+    grid-column: 2 / 2;
+}
+
+.item-box-right {
+    grid-column: 3 / 3;
+}
+
+.illustration {
+    width: 380px;
+}
+
+.text {
+    position: absolute;
+    bottom: 0;
+    font-size: 18px;
+    color: #333350
+}
+
+.text p {
+    padding: 0 45px 0 45px;
+}
+
+.motiv-button {
+    text-align: center;
+    grid-column: 2 / 2;
+    grid-row: 8;
+}
