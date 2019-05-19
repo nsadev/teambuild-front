@@ -9,7 +9,7 @@
 }
 
 
-h1 {
+.jumbo-header {
     margin-bottom: 2rem;
     position: absolute;
     width: 445px;
@@ -26,7 +26,7 @@ h1 {
     color: #333333;
 }
 
-p {
+.p-text {
     position: absolute;
     width: 714px;
     height: 99px;
