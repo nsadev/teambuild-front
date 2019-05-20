@@ -1,6 +1,7 @@
 .container {
   display: flex;
-  width: 1440px; 
+  /*width: 1440px;*/
+  width: 99vw;
 }
 
 .navbar {
