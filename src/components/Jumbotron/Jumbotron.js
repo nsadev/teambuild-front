@@ -1,5 +1,5 @@
 import React from "react";
-import "./jumbo.css";
+import "./jumbotron.css";
 
 const Jumbotron = ({ onRouteChange }) => (
   <div className="jumbo-container">
