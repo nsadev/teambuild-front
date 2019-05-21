@@ -48,6 +48,7 @@
     background: rgba(208, 213, 238, 0.17);
     border-radius: 20px;
     transform: rotate(23.3deg);
+    z-index: -1;
 }
 
 .rectangle-2 {
