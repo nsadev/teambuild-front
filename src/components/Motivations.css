@@ -1,3 +1,4 @@
+
 .motiv-container {
     height: 850px;
     background-color: #ffffff;
@@ -39,7 +40,7 @@
     color: #333350
 }
 
-.text p {
+.text > p {
     padding: 0 45px 0 45px;
 }
 
@@ -47,4 +48,9 @@
     text-align: center;
     grid-column: 2 / 2;
     grid-row: 8;
+}
+
+.sv {
+    margin-bottom: -20px;
+    background-color: #f2f7ff;
 }
