@@ -16,7 +16,6 @@ const App = () => {
   return (
     <Fragment>
       <Navbar />
-      {/*<JumbotronV2 />*/}
       <Jumbotron onRouteChange={onRouteChange} />
       <Motivations />
       <UserStories />
