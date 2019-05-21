@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import logo_text_white from "../static/logo_text_white.svg";
+import logo_text_white from "../../static/logo_text_white.svg";
 
 const Footer = () => (
   <div className="footer">
