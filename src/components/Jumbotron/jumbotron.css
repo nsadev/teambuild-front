@@ -3,6 +3,11 @@
     grid-template-columns: 1fr 1fr 1fr;
     height: 600px;
     background: linear-gradient(180deg, #ffffff 0%, #f2f7ff 100%);
+
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
 }
 
 .jumbotron {
@@ -48,7 +53,6 @@
     background: rgba(208, 213, 238, 0.17);
     border-radius: 20px;
     transform: rotate(23.3deg);
-    z-index: -1;
 }
 
 .rectangle-2 {
