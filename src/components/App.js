@@ -6,6 +6,7 @@ import "./App.css";
 import Motivations from "./Motivations/Motivations";
 import Jumbotron from "./Jumbotron/Jumbotron";
 import UserStories from "./UserStories/UserStories";
+import FeaturedProjects from "./FeaturedProjects/FeaturedProjects";
 
 const App = () => {
   const [route, setRoute] = useState("home");
@@ -18,6 +19,7 @@ const App = () => {
       <Navbar />
       <Jumbotron onRouteChange={onRouteChange} />
       <Motivations />
+      <FeaturedProjects />
       <UserStories />
       <PreFooter />
       <Footer />
