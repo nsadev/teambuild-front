@@ -1,6 +1,6 @@
 import React from "react";
 import "./Navbar.css";
-import logo_text from "../static/logo_text.png";
+import logo_text from "../../static/logo_text.png";
 
 const Navbar = () => (
   <div className="navbar">
