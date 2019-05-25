@@ -1,11 +1,12 @@
 import React, { Fragment, useState } from "react";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-import PreFooter from "./PreFooter";
+import Navbar from "./Navbar/Navbar";
+import Footer from "./Footer/Footer";
+import PreFooter from "./PreFooter/PreFooter";
 import "./App.css";
-import Motivations from "./Motivations";
+import Motivations from "./Motivations/Motivations";
 import Jumbotron from "./Jumbotron/Jumbotron";
 import UserStories from "./UserStories/UserStories";
+import FeaturedProjects from "./FeaturedProjects/FeaturedProjects";
 
 const App = () => {
   const [route, setRoute] = useState("home");
@@ -18,6 +19,7 @@ const App = () => {
       <Navbar />
       <Jumbotron onRouteChange={onRouteChange} />
       <Motivations />
+      <FeaturedProjects />
       <UserStories />
       <PreFooter />
       <Footer />
