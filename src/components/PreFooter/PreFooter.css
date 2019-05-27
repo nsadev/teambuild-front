@@ -4,11 +4,12 @@
   align-items: center;
   height: 364px;
   background-color: #13293d;
+  letter-spacing: 0.01em;
 }
 
 .prefooter__text {
   margin-top: 98px;
-  margin-bottom: 48px;
+  margin-bottom: 63px;
   color: #ffffff;
   font-size: 32px;
   line-height: 44px;
