@@ -61,6 +61,8 @@
   -webkit-mask-image: -webkit-gradient(white, black);
   -webkit-mask-image: -webkit-radial-gradient(white, black);
 
+  z-index: 1;
+
 }
 
 .rectangle-3 {
