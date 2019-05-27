@@ -50,6 +50,7 @@
 
 .rectangle-2 {
   position: absolute;
+  display: block;
   width: 208px;
   height: 216px;
   right: -50px;
