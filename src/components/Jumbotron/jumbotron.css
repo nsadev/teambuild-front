@@ -50,7 +50,6 @@
 
 .rectangle-2 {
   position: absolute;
-  display: block;
   width: 208px;
   height: 216px;
   right: -50px;
@@ -58,6 +57,10 @@
   background: rgba(208, 213, 238, 0.17);
   border-radius: 20px;
   transform: rotate(-15deg);
+
+  -webkit-mask-image: -webkit-gradient(white, black);
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+
 }
 
 .rectangle-3 {
