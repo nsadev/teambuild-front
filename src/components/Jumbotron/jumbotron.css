@@ -58,10 +58,7 @@
   border-radius: 20px;
   transform: rotate(-15deg);
 
-  -webkit-mask-image: -webkit-gradient(white, black);
-  -webkit-mask-image: -webkit-radial-gradient(white, black);
-
-  z-index: 1;
+  -webkit-mask-image: -webkit-gradient(black, white);
 
 }
 
