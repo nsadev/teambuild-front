@@ -66,7 +66,7 @@ const Motivations = () => {
         </div>
 
         <div className="motiv-button">
-          <a className="prefooter__button" href="#">
+          <a className="cta-button" href="#">
             Get Started
           </a>
         </div>

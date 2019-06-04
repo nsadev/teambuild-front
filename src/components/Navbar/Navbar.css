@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  width: 99vw;
+  width: 1440px;
 }
 
 .navbar {
@@ -16,10 +16,6 @@
   align-self: center;
 }
 
-.navbar__logo__img {
-  height: 36px;
-}
-
 .navbar__links {
   margin-right: 161px;
   align-self: center;
@@ -32,34 +28,4 @@
 .navbar__login {
   margin-right: 64px;
   align-self: center;
-}
-
-.navbar__login__link {
-  border: 2px solid #333333;
-  box-sizing: border-box;
-  border-radius: 8px;
-  padding: 8px 34px;
-}
-
-.link,
-.link:visited {
-  text-decoration: none;
-  font-family: "Open Sans";
-  font-weight: 600;
-  line-height: 22px;
-}
-
-.link--default,
-.link--default:visited {
-  color: #333333;
-}
-
-.link--white,
-.link--white:visited {
-  color: white;
-}
-
-.link--emphasis,
-.link--emphasis:visited {
-  color: #4eb9f4;
 }
