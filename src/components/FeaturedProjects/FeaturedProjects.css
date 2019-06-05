@@ -1,5 +1,5 @@
 .featured-container {
-  background-color: #F2F5FA;
+  background-color: #f2f5fa;
   padding-top: 3%;
   padding-bottom: 4%;
 }
@@ -12,7 +12,7 @@
   padding-left: 10%;
 }
 
-.featured-header{
+.featured-header {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: bold;
@@ -61,18 +61,6 @@
 .project-name {
   margin-top: 5px;
   margin-bottom: 0;
-}
-
-.proj__button {
-  border-radius: 4px;
-  border: 2px solid #474747;
-  padding: 8px 10px;
-  text-decoration: none;
-  color: #474747;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 20px;
-  max-width: 23%;
 }
 
 .button {

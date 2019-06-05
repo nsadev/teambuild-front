@@ -14,15 +14,3 @@
   font-size: 32px;
   line-height: 44px;
 }
-
-.prefooter__button {
-  background-color: #56c2ff;
-  box-sizing: border-box;
-  border-radius: 8px;
-  padding: 15px 40px;
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 27px;
-}
