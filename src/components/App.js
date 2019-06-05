@@ -8,6 +8,8 @@ import Jumbotron from "./Jumbotron/Jumbotron";
 import UserStories from "./UserStories/UserStories";
 import FeaturedProjects from "./FeaturedProjects/FeaturedProjects";
 
+import SignIn from './SignIn/SignIn';
+
 const App = () => {
   const [route, setRoute] = useState("home");
   const onRouteChange = () => {
@@ -23,6 +25,9 @@ const App = () => {
       <UserStories />
       <PreFooter />
       <Footer />
+
+      {/*<SignIn />*/}
+
     </Fragment>
   );
 };
