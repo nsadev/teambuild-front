@@ -1,9 +1,8 @@
 import React, {useState} from 'react';
 import './SignIn.css'
-import '../Home/Jumbotron/Jumbotron.css'
 import '../../../main.css';
-import '../Home/Navbar/Navbar.css';
-import Logo from '../../Logo/Logo'
+import Logo from '../../Logo/Logo';
+import {Link} from 'react-router-dom';
 
 
 const SignIn = (props) => {
@@ -51,7 +50,7 @@ const SignIn = (props) => {
                 <div className="rectangle rectangle-4" />
             </div>
 
-            <div className="signin-container">
+            <div className="template-container signin-container">
 
                 <div className="signin-window">
 
@@ -81,7 +80,7 @@ const SignIn = (props) => {
                     </form>
 
                     <div className="center form-text-color signin-footer">
-                        Don't have an account? <a href="#">Apply</a>
+                        Don't have an account? <Link className="signin-footer" to="/apply"><a href="#">Apply</a></Link>
                     </div>
 
                 </div>
