@@ -22,10 +22,12 @@ const Navbar = () => (
           View Projects
         </a>
       </div>
-      <div className="navbar__login"><Link className="link" to="/signin">
-        <a className="login-button" href="#">
-          Log in
-        </a></Link>
+      <div className="navbar__login">
+        <Link className="link" to="/signin">
+          <a className="login-button" href="#">
+            Log in
+          </a>
+        </Link>
       </div>
     </div>
   </div>
