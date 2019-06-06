@@ -1,5 +1,5 @@
-import img0 from "../../static/austin-distel-1485544-unsplash.jpg";
-import img1 from "../../static/carlos-muza-84523-unsplash.jpg";
+import img0 from "../../../../static/austin-distel-1485544-unsplash.jpg";
+import img1 from "../../../../static/carlos-muza-84523-unsplash.jpg";
 
 export const ProjectsList = [
   {

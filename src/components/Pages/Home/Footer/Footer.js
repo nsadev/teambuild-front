@@ -1,7 +1,8 @@
 import React from "react";
 import "./Footer.css";
-import "../../main.css";
-import logo_text_white from "../../static/logo_text_white.svg";
+import "../../../../main.css";
+import logo_text_white from "../../../../static/logo_text_white.svg";
+import {Link} from "react-router-dom";
 
 const Footer = () => (
   <div className="footer">
@@ -26,9 +27,11 @@ const Footer = () => (
         </a>
       </div>
       <div className="cta-white-outline">
-        <a href="#" className="link white">
-          Get Started
-        </a>
+        <Link className="link" to="/apply">
+          <a href="#" className="link white">
+            Get Started
+          </a>
+        </Link>
       </div>
     </div>
   </div>

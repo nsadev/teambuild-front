@@ -1,6 +1,8 @@
 import React from "react";
 import "./FeaturedProjects.css";
 import { ProjectsList } from "./ProjectsList";
+import GetStartedButton from '../../../GetStartedButton/GetStartedButton';
+
 
 const FeaturedProjects = ({ onRouteChange }) => {
   return (
@@ -37,9 +39,7 @@ const FeaturedProjects = ({ onRouteChange }) => {
         </div>
       </div>
       <div className="button">
-        <a className="cta-button" href="#" onClick={onRouteChange}>
-          Get Started
-        </a>
+        <GetStartedButton />
       </div>
     </div>
   );

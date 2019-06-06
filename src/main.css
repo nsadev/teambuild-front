@@ -66,6 +66,18 @@
   max-width: 23%;
 }
 
+.cta-button-form {
+  background-color: #56c2ff;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 13px 63px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+}
+
 /********************************************
     LINKS
 *********************************************/
