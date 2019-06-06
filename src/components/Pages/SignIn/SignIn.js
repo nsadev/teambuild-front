@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import './SignIn.css'
-import '../Jumbotron/Jumbotron.css'
-import '../../main.css';
-import '../Navbar/Navbar.css';
-import logo_text from '../../static/logo_text.png';
+import '../Home/Jumbotron/Jumbotron.css'
+import '../../../main.css';
+import '../Home/Navbar/Navbar.css';
+import Logo from '../../Logo/Logo'
 
 
 const SignIn = (props) => {
@@ -41,13 +41,7 @@ const SignIn = (props) => {
     return(
         <div>
 
-            <div className="navbar">
-                <div className="container">
-                    <div className="navbar__logo">
-                        <img alt="TeamBuild logo" className="logo" src={logo_text} />
-                    </div>
-                </div>
-            </div>
+            <Logo />
 
             <div>
                 <div className="rectangle rectangle-1" />

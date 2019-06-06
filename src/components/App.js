@@ -1,34 +1,18 @@
-import React, { Fragment, useState } from "react";
-import Navbar from "./Navbar/Navbar";
-import Footer from "./Footer/Footer";
-import PreFooter from "./PreFooter/PreFooter";
+import React from "react";
+import {BrowserRouter, Route} from 'react-router-dom';
 import "./App.css";
-import Motivations from "./Motivations/Motivations";
-import Jumbotron from "./Jumbotron/Jumbotron";
-import UserStories from "./UserStories/UserStories";
-import FeaturedProjects from "./FeaturedProjects/FeaturedProjects";
-
-import SignIn from './SignIn/SignIn';
+import Home from "./Pages/Home";
+import Apply from "./Pages/Apply";
+import SignIn from "./Pages/SignIn/SignIn"
 
 const App = () => {
-  const [route, setRoute] = useState("home");
-  const onRouteChange = () => {
-    setRoute(route === "signIn");
-  };
 
   return (
-    <Fragment>
-      {/*<Navbar />*/}
-      {/*<Jumbotron onRouteChange={onRouteChange} />*/}
-      {/*<Motivations />*/}
-      {/*<FeaturedProjects />*/}
-      {/*<UserStories />*/}
-      {/*<PreFooter />*/}
-      {/*<Footer />*/}
-
-      <SignIn />
-
-    </Fragment>
+      <BrowserRouter>
+          <Route path="/" exact component={Home} />
+          <Route path="/apply" exact component={Apply} />
+          <Route path="/signin" exact component={SignIn} />
+      </BrowserRouter>
   );
 };
 
