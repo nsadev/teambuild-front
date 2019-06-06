@@ -18,15 +18,15 @@ const App = () => {
 
   return (
     <Fragment>
-      <Navbar />
-      <Jumbotron onRouteChange={onRouteChange} />
-      <Motivations />
-      <FeaturedProjects />
-      <UserStories />
-      <PreFooter />
-      <Footer />
+      {/*<Navbar />*/}
+      {/*<Jumbotron onRouteChange={onRouteChange} />*/}
+      {/*<Motivations />*/}
+      {/*<FeaturedProjects />*/}
+      {/*<UserStories />*/}
+      {/*<PreFooter />*/}
+      {/*<Footer />*/}
 
-      {/*<SignIn />*/}
+      <SignIn />
 
     </Fragment>
   );
