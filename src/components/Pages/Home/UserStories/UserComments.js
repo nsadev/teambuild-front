@@ -1,8 +1,8 @@
-import img0 from "../../static/profimg0.png";
-import img1 from "../../static/profimg1.jpeg";
-import img2 from "../../static/profimg2.jpg";
-import img3 from "../../static/profimg3.png";
-import img4 from "../../static/profimg4.jpg";
+import img0 from "../../../../static/profimg0.png";
+import img1 from "../../../../static/profimg1.jpeg";
+import img2 from "../../../../static/profimg2.jpg";
+import img3 from "../../../../static/profimg3.png";
+import img4 from "../../../../static/profimg4.jpg";
 
 export const UserComments = [
   {
