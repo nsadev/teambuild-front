@@ -1,5 +1,8 @@
 import React from "react";
 import "./PreFooter.css";
+import "../../../../main.css";
+import GetStartedButton from '../../../GetStartedButton/GetStartedButton';
+
 
 const PreFooter = () => (
   <div className="prefooter">
@@ -7,9 +10,7 @@ const PreFooter = () => (
       <h2 className="prefooter__text">Ready to build something amazing?</h2>
     </div>
     <div>
-      <a className="prefooter__button" href="#">
-        Get Started
-      </a>
+      <GetStartedButton />
     </div>
   </div>
 );

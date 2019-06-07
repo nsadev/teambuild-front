@@ -1,14 +1,17 @@
 import React from "react";
-import "./jumbotron.css";
+import "./Jumbotron.css";
+import "../../../../main.css";
+import GetStartedButton from '../../../GetStartedButton/GetStartedButton';
 
-const Jumbotron = ({ onRouteChange }) => (
+
+const Jumbotron = () => (
   <div className="jumbo-container">
 
-    <div className="rectangle-1" />
-    <div className="rectangle-2" />
-    <div className="rectangle-small"/>
-    <div className="rectangle-3" />
-    <div className="rectangle-4" />
+    <div className="rectangle rectangle-1" />
+    <div className="rectangle rectangle-2" />
+    <div className="rectangle rectangle-small"/>
+    <div className="rectangle rectangle-3" />
+    <div className="rectangle rectangle-4" />
 
     <div className="jumbotron">
           <div className="jumbo-title jumbo">Build something <ins>awesome</ins>.</div>
@@ -20,9 +23,7 @@ const Jumbotron = ({ onRouteChange }) => (
           </p>
 
         <div>
-            <a className="prefooter__button" href="#" onClick={onRouteChange}>
-                Get Started
-            </a>
+            <GetStartedButton />
         </div>
 
     </div>

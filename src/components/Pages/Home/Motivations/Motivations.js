@@ -1,8 +1,10 @@
 import React from "react";
 import "./Motivations.css";
-import find_team from "../../static/find_team.png";
-import build from "../../static/build.png";
-import fast_working from "../../static/fast_working.png";
+import find_team from "../../../../static/find_team.png";
+import build from "../../../../static/build.png";
+import fast_working from "../../../../static/fast_working.png";
+import GetStartedButton from '../../../GetStartedButton/GetStartedButton';
+
 
 const Motivations = () => {
   return (
@@ -65,10 +67,9 @@ const Motivations = () => {
           </div>
         </div>
 
+
         <div className="motiv-button">
-          <a className="prefooter__button" href="#">
-            Get Started
-          </a>
+          <GetStartedButton/>
         </div>
       </div>
     </div>
