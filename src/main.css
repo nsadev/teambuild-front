@@ -66,6 +66,18 @@
   max-width: 23%;
 }
 
+.cta-button-form {
+  background-color: #56c2ff;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 13px 63px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+}
+
 /********************************************
     LINKS
 *********************************************/
@@ -76,3 +88,77 @@
   font-weight: 600;
   line-height: 22px;
 }
+
+
+/*********************************************
+    TEMPLATE
+ ********************************************/
+
+.template-container {
+  background: linear-gradient(180deg, #ffffff 0%, #f2f7ff 100%);
+  height: 110vh;
+  width: 100%;
+}
+
+
+/*********************************************
+    RECTANGLES
+ ********************************************/
+
+.rectangle {
+  position: absolute;
+  background: rgba(208, 213, 238, 0.17);
+  border-radius: 20px;
+}
+
+.rectangle-1 {
+  width: 164.02px;
+  height: 170.32px;
+  right: 100px;
+  top: 95px;
+  transform: rotate(23.3deg);
+}
+
+.rectangle-2 {
+  width: 208px;
+  height: 216px;
+  right: -50px;
+  top: 201.83px;
+  transform: rotate(-15deg);
+}
+
+.rectangle-3 {
+  width: 264.18px;
+  height: 274.34px;
+  left: -36.33px;
+  top: 347.46px;
+  transform: rotate(30deg);
+}
+
+.rectangle-4 {
+  width: 253.84px;
+  height: 263.6px;
+  left: -47.5px;
+  top: 566.24px;
+  transform: rotate(13.57deg);
+}
+
+.rectangle-small {
+  position: absolute;
+  width: 53.84px;
+  height: 53.84px;
+  right: -23px;
+  top: 440.24px;
+  background: rgba(208, 213, 238, 0.17);
+  border-radius: 10px;
+  transform: rotate(13.57deg);
+}
+
+/*********************************************
+    OTHERS
+ ********************************************/
+
+.center {
+  text-align: center;
+}
+
