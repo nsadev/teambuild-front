@@ -33,43 +33,45 @@ const Motivations = () => {
         </g>
       </svg>
 
-      <div className="motiv-container">
-        <div className="item-box item-box-left">
-          <img className="illustration" src={find_team} />
-          <div className="text">
-            <h2>Apply and find your team</h2>
-            <p>
-              Etiam imperdiet imperdiet orci. Donec id justo. Nunc nulla.
-              Suspendisse faucibus.
-            </p>
-          </div>
+        <div>
+          <div className="motiv-container">
+            <div className="item-box item-box-left">
+              <img className="illustration" src={find_team} />
+              <div className="text">
+                <h2>Apply and find your team</h2>
+                <p>
+                  Etiam imperdiet imperdiet orci. Donec id justo. Nunc nulla.
+                  Suspendisse faucibus.
+                </p>
+              </div>
+            </div>
+
+            <div className="item-box item-box-mid">
+              <img className="illustration" src={build} />
+              <div className="text">
+                <h2>Build your awesome project</h2>
+                <p>
+                  Etiam imperdiet imperdiet orci. Donec id justo. Nunc nulla.
+                  Suspendisse faucibus.
+                </p>
+              </div>
+            </div>
+
+            <div className="item-box item-box-right">
+              <img className="illustration" src={fast_working} />
+              <div className="text">
+                <h2>Fast forward your career</h2>
+                <p>
+                  Etiam imperdiet imperdiet orci. Donec id justo. Nunc nulla.
+                  Suspendisse faucibus.
+                </p>
+              </div>
+            </div>
         </div>
-
-        <div className="item-box item-box-mid">
-          <img className="illustration" src={build} />
-          <div className="text">
-            <h2>Build your awesome project</h2>
-            <p>
-              Etiam imperdiet imperdiet orci. Donec id justo. Nunc nulla.
-              Suspendisse faucibus.
-            </p>
+        <div>
+          <div className="motiv-button">
+            <GetStartedButton/>
           </div>
-        </div>
-
-        <div className="item-box item-box-right">
-          <img className="illustration" src={fast_working} />
-          <div className="text">
-            <h2>Fast forward your career</h2>
-            <p>
-              Etiam imperdiet imperdiet orci. Donec id justo. Nunc nulla.
-              Suspendisse faucibus.
-            </p>
-          </div>
-        </div>
-
-
-        <div className="motiv-button">
-          <GetStartedButton/>
         </div>
       </div>
     </div>

@@ -38,6 +38,10 @@
 }
 
 @media (max-width: 1024px) {
+  .navbar__logo,
+  .navbar__m-icon {
+    margin: 0
+  }
   .navbar__links {
     width: 100%;
     position: absolute;
@@ -108,8 +112,5 @@
 }
 
 @media (max-width: 480px) {
-  .navbar__logo,
-  .navbar__m-icon {
-    margin: 0
-  }
+  
 }
