@@ -7,15 +7,9 @@ import {Link} from 'react-router-dom';
 
 const Logo = () => {
     return(
-        <div className="navbar">
-            <div className="container">
-                <div className="navbar__logo">
-                    <Link to="/">
-                    <img alt="TeamBuild logo" className="logo" src={logo_text} />
-                    </Link>
-                </div>
-            </div>
-        </div>
+        <Link to="/">
+            <img alt="TeamBuild logo" className="logo" src={logo_text} />
+        </Link>
     )
 }
 

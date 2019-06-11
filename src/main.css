@@ -1,4 +1,36 @@
 /********************************************
+    LAYOUT
+*********************************************/
+
+.container {
+  display: flex;
+  width: 1440px;
+}
+
+/********************************************
+    NAVIGATION BAR
+*********************************************/
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding: 14px;
+  letter-spacing: 0.01em;
+}
+
+.navbar__logo {
+  flex-grow: 3;
+  margin-left: 64px;
+  align-self: center;
+}
+
+.navbar__links {
+  align-self: center;
+  margin-left: 52px;
+}
+
+
+/********************************************
     COLORS
 *********************************************/
 

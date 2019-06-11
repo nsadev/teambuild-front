@@ -8,7 +8,13 @@ const Background = () => {
     return(
         <div>
 
-            <Logo />
+            <div className="navbar">
+                <div className="container">
+                    <div className="navbar__logo">
+                        <Logo/>
+                    </div>
+                </div>
+            </div>
 
             <div>
                 <div className="rectangle rectangle-1" />

@@ -40,7 +40,7 @@ const SignIn = (props) => {
     return(
         <div>
 
-            <Logo />
+
 
             <div>
                 <div className="rectangle rectangle-1" />
@@ -48,6 +48,14 @@ const SignIn = (props) => {
                 <div className="rectangle-small" />
                 <div className="rectangle rectangle-3" />
                 <div className="rectangle rectangle-4" />
+            </div>
+
+            <div className="navbar">
+                <div className="container">
+                    <div className="navbar__logo">
+                        <Logo/>
+                    </div>
+                </div>
             </div>
 
             <div className="template-container signin-container">
@@ -81,6 +89,12 @@ const SignIn = (props) => {
 
                     <div className="center form-text-color signin-footer">
                         Don't have an account? <Link className="signin-footer" to="/apply"><a href="#">Apply</a></Link>
+
+
+                        {/*Delete when auth logic done*/}
+                            <br/><Link to="/profile" >Temp Login</Link>
+                        {/*--------------------------------------*/}
+
                     </div>
 
                 </div>
