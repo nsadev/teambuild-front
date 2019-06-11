@@ -1,0 +1,15 @@
+.p-footer {
+    background-color: #13293D;
+    height: 120px;
+    width: 100%;
+    color: white;
+    display: inline-block;
+}
+
+.p-footer > h3 {
+    font-size: 20px;
+}
+
+.p-footer > p {
+    font-size: 13px;
+}
