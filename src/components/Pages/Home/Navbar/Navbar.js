@@ -1,6 +1,6 @@
 import React from "react";
-import "./Navbar.css";
 import "../../../../main.css";
+import "./Navbar.css";
 import logo_text from "../../../../static/logo_text.png";
 import {Link} from 'react-router-dom';
 import { useState } from "react";
@@ -29,11 +29,11 @@ const Navbar = () => {
           </button>
           <div className="navbar__links">
             <Link className="link" to="/apply">
-              <a className="navbar__links link blue" href="#">
+              <a className="navbar__links__link link blue" href="#">
                 Apply for membership
               </a>
             </Link>
-            <a className="navbar__links link black" href="#">
+            <a className="navbar__links__link link black" href="#">
               View Projects
             </a>
             <Link className="link" to="/signin">
