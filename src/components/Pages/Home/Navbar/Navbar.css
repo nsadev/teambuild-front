@@ -54,12 +54,12 @@
     max-height: 0;
     transition: max-height .3s linear;
     overflow: auto;
+    margin: 0;
   }
 
   .navbar__m-dropdown.open .navbar__links {
     height: calc(100vh - 93px);
     max-height: none;
-    padding-left: 12px;
     display: flex;
     flex-direction: column;
   }
@@ -111,8 +111,4 @@
   .login-button {
     margin: 0;
   }
-}
-
-@media (max-width: 480px) {
-  
 }
