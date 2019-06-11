@@ -37,3 +37,47 @@
   color: #a291ef;
 }
 
+@media (max-width: 1120px) {
+  .jumbo-title {
+    position: relative
+  }
+
+  .jumbo-text {
+    margin: 20px 0 50px 0;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .jumbo-container {
+    display: flex;
+    height: 400px;
+    padding-top: 50px;
+  }
+  .jumbotron {
+    padding: 14px;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .jumbo-title {
+    font-size: 24px;
+  }
+
+  .jumbo-text {
+    font-size: 16px;
+  }
+}
+
+
+@media (max-width: 687px) {
+  .rectangle-1,
+  .rectangle-2,
+  .rectangle-small,
+  .rectangle-3,
+  .rectangle-4 {
+    display: none;
+  }
+}
