@@ -5,6 +5,7 @@ import Home from "./Pages/Home";
 import Apply from "./Pages/Apply";
 import SignIn from "./Pages/SignIn/SignIn";
 import Profile from "./Pages/Profile/Profile";
+import protectedRoute from "../protectedRoute";
 
 import TemplatePage from "./Pages/TemplatePage/TemplatePage";
 import Register from "./Pages/Register/Register";
