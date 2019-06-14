@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./UserCompNav.css";
+import "./ProfilePicture.css";
 import {Link} from 'react-router-dom';
 
 /* Props list:
@@ -10,7 +10,7 @@ userLogout => link to the user logout action/page
 userSignedIn => User logged in state. Module only shown on 1, is set to 0 on logout
 */
 
-const UserCompNav = ({userImg, userName, userSettings, userLogout, userSignedIn}) => {
+const ProfilePicture = ({userImg, userSettings, userLogout, userSignedIn}) => {
 
     const [hover, setHover] = useState(0);
     const [SignedIn, setSignedIn] = useState(userSignedIn);
@@ -45,4 +45,4 @@ const UserCompNav = ({userImg, userName, userSettings, userLogout, userSignedIn}
     )
 }
 
-export default UserCompNav;
+export default ProfilePicture;
