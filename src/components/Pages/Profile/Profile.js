@@ -4,13 +4,12 @@ import '../../../main.css'
 import ProfileNavbar from './ProfileNavbar/ProfileNavbar'
 import ProfileFooter from './ProfileFooter/ProfileFooter';
 
-const Profile = ({firstname}) => {
+const Profile = ({firstname, lastname }) => {
 
-    console.log(firstname)
     return(
         <div>
             <ProfileNavbar />
-            <p>Hello, {firstname} !</p>
+            <p>Hello, {firstname} {lastname} !</p>
             <ProfileFooter/>
         </div>
     )

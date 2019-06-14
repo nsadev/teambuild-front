@@ -199,3 +199,8 @@
   text-align: center;
 }
 
+.error-msg {
+  color: #ff0b21;
+  margin-top: -40px;
+}
+

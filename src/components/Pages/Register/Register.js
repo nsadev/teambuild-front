@@ -13,6 +13,7 @@ const Register = () => {
     const [lastname, setLastname] = useState(null)
     const [password, setPassword] = useState(null)
     const [confPw, setConfPw] = useState(null)
+    const [message, setMessage] = useState(null)
 
     function emailChange(e){
         setEmail(e.target.value)
@@ -40,30 +41,35 @@ const Register = () => {
         //add feedback messages
 
         if(email && firstname && lastname && password && confPw){
-            if(password === confPw && password.length >= 8){
+            if(password.length >= 8){
+                if(password === confPw){
 
-                fetch('http://localhost:5000/user/register', {
-                    method: 'post',
-                    headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({
-                        email: email,
-                        first_name: firstname,
-                        last_name: lastname,
-                        password: password
-                    })
-                }).then(resp => resp.json())
-                    .then(user => {
-                        if(user) {
-                            //redirect to the profile page
-                            console.log(user)
+                    fetch('http://localhost:5000/user/register', {
+                        method: 'post',
+                        headers: {'Content-Type': 'application/json'},
+                        body: JSON.stringify({
+                            email: email,
+                            first_name: firstname,
+                            last_name: lastname,
+                            password: password
+                        })
+                    }).then(resp => resp.json())
+                        .then(user => {
+                            if(user) {
+                                //redirect to the profile page
+                                setMessage(user.message)
 
-                        }
-                    })
-            } else{
-                console.log('Passwords are not matching or too short')
+
+                            }
+                        })
+                } else {
+                    setMessage('Passwords are not matching')
+                }
+            } else {
+                setMessage('Password is too short')
             }
-        }else{
-            console.log("Every fields are mandatory")
+        } else {
+            setMessage("Every fields are mandatory")
         }
 
 
@@ -91,7 +97,9 @@ const Register = () => {
                             <input className="signin-input form-text-color" type="text"
                                    name="lastname" id="lastname" onChange={lastnameChange}/>
 
-                            <label className="form-text-color form-text" >Password</label>
+                            <label className="form-text-color form-text" >
+                                Password <ins className="field-info">minimum 8 characters</ins>
+                            </label>
                             <input className="signin-input form-text-color" type="password"
                                    name="password" id="password" onChange={passwordChange}/>
 
@@ -99,6 +107,7 @@ const Register = () => {
                             <input className="signin-input form-text-color" type="password"
                                    name="confPw" id="confPw" onChange={confPwChange}/>
 
+                            <div className="error-msg center"><p>{message}</p></div>
                             <div className="signin-button center">
                                 <a className="cta-button-form" type="submit" onClick={onSubmitRegister} >
                                     Register

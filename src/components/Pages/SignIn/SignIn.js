@@ -7,9 +7,10 @@ import {Link, Redirect} from 'react-router-dom';
 
 const SignIn = ({getUser}) => {
 
-    const [email, setEmail] = useState(undefined)
-    const [password, setPassword] = useState(undefined)
+    const [email, setEmail] = useState(null)
+    const [password, setPassword] = useState(null)
     const [authenticated, setAuthenticated] = useState(false)
+    const [message, setMessage] = useState(null)
 
 
     function handleEmailChange(e) {
@@ -22,30 +23,44 @@ const SignIn = ({getUser}) => {
 
     const submitSignin = () => {
 
-        //Add checking conditions
+        if(email && password) {
+            try {
+                fetch('http://localhost:5000/user/login', {
+                    method: 'post',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        email: email,
+                        password: password
+                    })
+                }).then(resp => resp.json())
+                    .then(user => {
 
-        fetch('http://localhost:5000/user/login', {
-            method: 'post',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({
-                email: email,
-                password: password
-            })
-        }).then(resp => resp.json())
-            .then(user => {
-                if(user){
-                    // State need to wait for update, otherwise user can login only for the 2nd attempt
-                    setTimeout(() => {setAuthenticated(true)}, 1)
+                        if(user.message === "Login successful"){
 
-                    // User object updating in App.js
-                    getUser(user)
-                }
-            })
+                            // State need to wait for update, otherwise user can login only for the 2nd attempt
+                            setTimeout(() => {setAuthenticated(true)}, 1)
+
+                            // User object updating in App.js
+                            getUser(user)
+
+                        } else {
+                            console.log('wrong details')
+                        }
+                    })
+            } catch(e) {
+                console.log(e)
+            }
+
+        }else{
+            console.log("Please provide your E-mail and Password")
+        }
+
+
     }
 
 
     if(authenticated === true){
-        return <Redirect to='/profile' />
+        return <Redirect to='/' />
     }
 
     return(
@@ -88,6 +103,7 @@ const SignIn = ({getUser}) => {
                                name="password"
                                onChange={handlePwChange}
                         />
+                        <p>{message}</p>
 
                         <div className="signin-button center">
                             <a className="cta-button-form" onClick={submitSignin} >
