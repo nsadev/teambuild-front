@@ -5,7 +5,7 @@ import Home from "./Pages/Home";
 import Apply from "./Pages/Apply";
 import SignIn from "./Pages/SignIn/SignIn";
 import Profile from "./Pages/Profile/Profile";
-import protectedRoute from "../protectedRoute";
+import { PrivateRoute } from "../PrivateRoute";
 
 import TemplatePage from "./Pages/TemplatePage/TemplatePage";
 import Register from "./Pages/Register/Register";
@@ -31,7 +31,7 @@ const App = () => {
     <BrowserRouter>
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route
+        <PrivateRoute
           exact
           path="/profile"
           render={props => <Profile {...props} firstname={firstname} />}
