@@ -1,13 +1,15 @@
 import React, { useState } from "react";
+import { Link, Redirect, withRouter } from "react-router-dom";
+
+import Logo from "../../Logo/Logo";
+import auth from "../../../utils/Auth";
+
 import "./SignIn.css";
 import "../../../main.css";
-import Logo from "../../Logo/Logo";
-import { Link, Redirect } from "react-router-dom";
 
-const SignIn = ({ getUser }) => {
+const SignIn = ({ getUser, history }) => {
   const [email, setEmail] = useState(undefined);
   const [password, setPassword] = useState(undefined);
-  const [authenticated, setAuthenticated] = useState(false);
 
   function handleEmailChange(e) {
     setEmail(e.target.value);
@@ -31,18 +33,17 @@ const SignIn = ({ getUser }) => {
       .then(resp => resp.json())
       .then(user => {
         if (user) {
-          // State need to wait for update, otherwise user can login only for the 2nd attempt
-          setAuthenticated(true);
-          console.log(user);
           // User object updating in App.js
           getUser(user);
+          // Redirect user to profile page
+          auth.login(() => history.push("/profile"));
         }
       });
   };
 
-  if (authenticated === true) {
-    return <Redirect to="/profile" />;
-  }
+  // if (authenticated === true) {
+  //   return <Redirect to="/profile" />;
+  // }
 
   return (
     <div>
@@ -106,4 +107,4 @@ const SignIn = ({ getUser }) => {
   );
 };
 
-export default SignIn;
+export default withRouter(SignIn);
