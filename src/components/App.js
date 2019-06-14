@@ -11,6 +11,8 @@ import TemplatePage from "./Pages/TemplatePage/TemplatePage";
 import Register from "./Pages/Register/Register";
 
 const App = () => {
+  console.log("I Render :D");
+
   const [userid, setUserid] = useState(null);
   const [email, setEmail] = useState(null);
   const [firstname, setFirstname] = useState(null);
