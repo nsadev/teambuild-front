@@ -2,9 +2,11 @@ import React from 'react';
 import '../../../../main.css'
 import {Link} from "react-router-dom";
 import Logo from '../../../Logo/Logo'
+import ProfilePicture from './ProfilePicture/ProfilePicture';
 
 
 const ProfileNavbar = () => {
+
 
     return(
 
@@ -20,11 +22,13 @@ const ProfileNavbar = () => {
                         </Link>
 
                         <Link className="navbar__links link blue" to="#">
-                            Suggest project idea
+                            Create new project
                         </Link>
+
+
                     </div>
 
-                    {/*User profile component here*/}
+                    <ProfilePicture />
 
                 </div>
             </div>
