@@ -19,7 +19,7 @@ const App = () => {
 
     console.log('App', userid, email, firstname, lastname)
 
-    const PrivateRoute = ({render: Component, ...rest}) => (
+    const PrivateRoute = ({component: Component, ...rest}) => (
         <Route {...rest} render={(props) => (
             loggedIn === true ? <Component {...props}/> : <Redirect to={{
                 pathname: '/signin',
@@ -43,10 +43,14 @@ const App = () => {
     return (
         <BrowserRouter>
             <Switch>
-                <Route path="/" exact component={Home} />
-                <Route exact path="/profile" render={() => <Profile
-                    firstName={firstname}/> }
-                />
+
+
+                {(loggedIn === true)
+                    ? <PrivateRoute exact path="/" component={props => <Profile {...props}
+                        firstname={firstname} lastname={lastname} />}/>
+                    : <Route path="/" exact component={Home}/>
+                }
+
                 <Route path="/apply" exact component={TemplatePage} />    {/*Change for the Apply page*/}
                 <Route exact path="/signin" render={() => <SignIn getUser={getUser} /> } />
                 <Route path="/register" exact component={Register} />

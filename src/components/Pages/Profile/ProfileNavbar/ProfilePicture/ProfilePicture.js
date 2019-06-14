@@ -10,7 +10,7 @@ userLogout => link to the user logout action/page
 userSignedIn => User logged in state. Module only shown on 1, is set to 0 on logout
 */
 
-const ProfilePicture = ({userImg, userSettings, userLogout, userSignedIn}) => {
+const ProfilePicture = ({userImg, userSettings, userLogout, userSignedIn }) => {
 
     const [hover, setHover] = useState(0);
     const [SignedIn, setSignedIn] = useState(userSignedIn);
@@ -21,6 +21,7 @@ const ProfilePicture = ({userImg, userSettings, userLogout, userSignedIn}) => {
     const signedIn = (e) => {
         setSignedIn(e)
     }
+
 
     return(
         <div>
