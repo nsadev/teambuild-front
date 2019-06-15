@@ -16,7 +16,6 @@ const App = () => {
   const [email, setEmail] = useState(null);
   const [firstname, setFirstname] = useState(null);
   const [lastname, setLastname] = useState(null);
-  const [loggedIn, setLoggedIn] = useState(false);
 
   //Function passed to Sign In form where receives the user object and updating the state
 
@@ -25,7 +24,6 @@ const App = () => {
     setEmail(u["email"]);
     setFirstname(u["first_name"]);
     setLastname(u["last_name"]);
-    setLoggedIn(true);
   };
 
   // Not yet working correctly, but I will use two JWT tokens for authentication.

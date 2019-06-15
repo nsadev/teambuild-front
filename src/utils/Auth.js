@@ -1,5 +1,11 @@
+import Cookies from "js-cookie";
+
 class Auth {
   constructor() {
+    if (Cookies.get("teambuildPublic")) {
+      this.authenticated = true;
+      return;
+    }
     this.authenticated = false;
   }
 
@@ -9,6 +15,7 @@ class Auth {
   }
 
   logout(cb) {
+    Cookies.remove("teambuildPublic");
     this.authenticated = false;
     cb();
   }
