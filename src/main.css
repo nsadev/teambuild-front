@@ -112,6 +112,7 @@
   font-size: 18px;
   font-weight: 600;
   line-height: 27px;
+  cursor: pointer;
 }
 
 /********************************************
@@ -196,5 +197,10 @@
 
 .center {
   text-align: center;
+}
+
+.error-msg {
+  color: #ff0b21;
+  margin-top: -40px;
 }
 

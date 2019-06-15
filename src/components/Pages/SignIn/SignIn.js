@@ -2,13 +2,16 @@ import React, {useState} from 'react';
 import './SignIn.css'
 import '../../../main.css';
 import Logo from '../../Logo/Logo';
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 
 
-const SignIn = (props) => {
+const SignIn = ({getUser}) => {
 
-    const [email, setEmail] = useState(undefined)
-    const [password, setPassword] = useState(undefined)
+    const [email, setEmail] = useState(null)
+    const [password, setPassword] = useState(null)
+    const [authenticated, setAuthenticated] = useState(false)
+    const [message, setMessage] = useState(null)
+
 
     function handleEmailChange(e) {
         setEmail(e.target.value)
@@ -18,28 +21,50 @@ const SignIn = (props) => {
         setPassword(e.target.value)
     }
 
-    function submitSignin() {
-        fetch('/signin', {
-            method: 'POST',
-            body: JSON.stringify({
-                email: email,
-                password: password
-            })
-        }).then(resp => resp.json())
-            .then(user => {
-                if(user.user_id){
-                    //get user object
-                    //change signed-in state
-                }
-            })
+    const submitSignin = () => {
+
+        if(email && password) {
+            try {
+                fetch('http://localhost:5000/user/login', {
+                    method: 'post',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        email: email,
+                        password: password
+                    })
+                }).then(resp => resp.json())
+                    .then(user => {
+
+                        if(user.message === "Login successful"){
+
+                            // State need to wait for update, otherwise user can login only for the 2nd attempt
+                            setTimeout(() => {setAuthenticated(true)}, 1)
+
+                            // User object updating in App.js
+                            getUser(user)
+
+                        } else {
+                            console.log('wrong details')
+                        }
+                    })
+            } catch(e) {
+                console.log(e)
+            }
+
+        }else{
+            console.log("Please provide your E-mail and Password")
+        }
+
 
     }
 
-    //console.log(email, password)
+
+    if(authenticated === true){
+        return <Redirect to='/' />
+    }
 
     return(
         <div>
-
 
 
             <div>
@@ -78,9 +103,10 @@ const SignIn = (props) => {
                                name="password"
                                onChange={handlePwChange}
                         />
+                        <p>{message}</p>
 
                         <div className="signin-button center">
-                            <a className="cta-button-form" href="#" onClick={submitSignin} type="submit" >
+                            <a className="cta-button-form" onClick={submitSignin} >
                                 Sign In
                             </a>
                         </div>
@@ -92,7 +118,8 @@ const SignIn = (props) => {
 
 
                         {/*Delete when auth logic done*/}
-                            <br/><Link to="/profile" >Temp Login</Link>
+                            <br/><Link to="/register" >Register</Link>
+
                         {/*--------------------------------------*/}
 
                     </div>
