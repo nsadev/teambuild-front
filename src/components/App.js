@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import "./App.css";
 import Home from "./Pages/Home";
@@ -9,10 +9,9 @@ import { PrivateRoute } from "../PrivateRoute";
 
 import TemplatePage from "./Pages/TemplatePage/TemplatePage";
 import Register from "./Pages/Register/Register";
+import auth from "../utils/Auth";
 
 const App = () => {
-  console.log("I Render :D");
-
   const [userid, setUserid] = useState(null);
   const [email, setEmail] = useState(null);
   const [firstname, setFirstname] = useState(null);
@@ -28,6 +27,21 @@ const App = () => {
     setLastname(u["last_name"]);
     setLoggedIn(true);
   };
+
+  // Not yet working correctly, but I will use two JWT tokens for authentication.
+
+  // useEffect(() => {
+  //   fetch("/user/token", {
+  //     method: "post",
+  //     headers: { "Content-Type": "application/json" }
+  //   })
+  //     .then(res => res.json())
+  //     .then(({ valid }) => {
+  //       if (valid) {
+  //         auth.login(() => console.log("persistent"));
+  //       }
+  //     });
+  // });
 
   return (
     <BrowserRouter>
