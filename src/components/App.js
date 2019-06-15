@@ -51,7 +51,7 @@ const App = () => {
                     : <Route path="/" exact component={Home}/>
                 }
 
-                <Route path="/apply" exact component={TemplatePage} />    {/*Change for the Apply page*/}
+                <Route path="/apply" exact component={Apply} />
                 <Route exact path="/signin" render={() => <SignIn getUser={getUser} /> } />
                 <Route path="/register" exact component={Register} />
             </Switch>

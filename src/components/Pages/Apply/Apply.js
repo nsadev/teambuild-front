@@ -11,7 +11,7 @@ const Apply = (props) => {
    
    
     const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    const [name, setName] = useState("");
     const [ textArea, setTextArea] = useState("");
     const [githubName, setGithubName] = useState("");
 
@@ -19,8 +19,8 @@ const Apply = (props) => {
         setEmail(e.target.value);
     }
 
-    function onPasswordChange(e) {
-        setPassword(e.target.value);
+    function onNameChange(e) {
+        setName(e.target.value);
     }
 
     function onTextChange(e) {
@@ -37,7 +37,7 @@ const Apply = (props) => {
               headers: {'Content-Type': 'application/json'},
               body: JSON.stringify({
                 email,
-                password,
+                name,
                 githubName,
                 textArea
               })
@@ -63,18 +63,18 @@ const Apply = (props) => {
                     <h1 className="center form-text-color">Apply</h1>
 
                     <form className="apply-form">
-                        <label className="form-text-color form-text">E-mail</label>
+                        <label className="form-text-color form-text">Name</label>
                         <input className="apply-input form-text-color"
-                               type="email"
-                               name="username"
-                               onChange = {onEmailChange}
+                               type="name"
+                               name="name"
+                               onChange = {onNameChange}
                         />
 
-                        <label className="form-text form-text-color">Password</label>
+                        <label className="form-text form-text-color">E-mail</label>
                         <input className="apply-input form-text-color"
-                               type="password"
-                               name="password"
-                               onChange={onPasswordChange}
+                               type="email"
+                               name="email"
+                               onChange={onEmailChange}
                         />
                         <label className="form-text form-text-color">GitHub Account</label>
                         <input className="apply-input form-text-color"
@@ -82,7 +82,7 @@ const Apply = (props) => {
                                name="github-account-name"
                                onChange= {onGithubNameChange}
                         />
-                         <label className="label-text-area">Tell us about yourself</label>
+                         <label className="label-text-area">Tell us about yourself, tech used etc.</label>
                         <textarea className="text-area"
                                type="text"
                                name="github-account-name"
@@ -92,7 +92,7 @@ const Apply = (props) => {
 
 
                         <div className="apply-button center">
-                            <a className="cta-button-form" href="#" type="submit" onClick={onSubmit} >
+                            <a className="cta-button-form"  type="submit" onClick={onSubmit} >
                                 Submit
                             </a>
                         </div>
