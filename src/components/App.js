@@ -24,7 +24,6 @@ const App = () => {
     setEmail(u["email"]);
     setFirstname(u["first_name"]);
     setLastname(u["last_name"]);
-    setLoggedIn(true);
   };
 
   // Not yet working correctly, but I will use two JWT tokens for authentication.
