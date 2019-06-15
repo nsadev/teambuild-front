@@ -7,7 +7,6 @@ import ProfilePicture from './ProfilePicture/ProfilePicture';
 
 const ProfileNavbar = () => {
 
-
     return(
 
             <div className="navbar">
