@@ -1,111 +1,110 @@
-import React, {useState} from 'react';
-import './SignIn.css'
-import '../../../main.css';
-import Logo from '../../Logo/Logo';
-import {Link} from 'react-router-dom';
+import React, { useState } from "react";
+import { Link, Redirect, withRouter } from "react-router-dom";
 
+import Logo from "../../Logo/Logo";
+import auth from "../../../utils/Auth";
 
-const SignIn = (props) => {
+import "./SignIn.css";
+import "../../../main.css";
 
-    const [email, setEmail] = useState(undefined)
-    const [password, setPassword] = useState(undefined)
+const SignIn = ({ getUser, history }) => {
+  const [email, setEmail] = useState(undefined);
+  const [password, setPassword] = useState(undefined);
 
-    function handleEmailChange(e) {
-        setEmail(e.target.value)
-    }
+  function handleEmailChange(e) {
+    setEmail(e.target.value);
+  }
 
-    function handlePwChange(e) {
-        setPassword(e.target.value)
-    }
+  function handlePwChange(e) {
+    setPassword(e.target.value);
+  }
 
-    function submitSignin() {
-        fetch('/signin', {
-            method: 'POST',
-            body: JSON.stringify({
-                email: email,
-                password: password
-            })
-        }).then(resp => resp.json())
-            .then(user => {
-                if(user.user_id){
-                    //get user object
-                    //change signed-in state
-                }
-            })
+  const submitSignin = () => {
+    //Add checking conditions
 
-    }
+    fetch("/user/login", {
+      method: "post",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        email: email,
+        password: password
+      })
+    })
+      .then(resp => resp.json())
+      .then(user => {
+        if (user) {
+          // User object updating in App.js
+          getUser(user);
+          // Redirect user to profile page
+          auth.login(() => history.push("/profile"));
+        }
+      });
+  };
 
-    //console.log(email, password)
+  // if (authenticated === true) {
+  //   return <Redirect to="/profile" />;
+  // }
 
-    return(
-        <div>
+  return (
+    <div>
+      <div>
+        <div className="rectangle rectangle-1" />
+        <div className="rectangle rectangle-2" />
+        <div className="rectangle-small" />
+        <div className="rectangle rectangle-3" />
+        <div className="rectangle rectangle-4" />
+      </div>
 
-
-
-            <div>
-                <div className="rectangle rectangle-1" />
-                <div className="rectangle rectangle-2" />
-                <div className="rectangle-small" />
-                <div className="rectangle rectangle-3" />
-                <div className="rectangle rectangle-4" />
-            </div>
-
-            <div className="navbar">
-                <div className="container">
-                    <div className="navbar__logo">
-                        <Logo/>
-                    </div>
-                </div>
-            </div>
-
-            <div className="template-container signin-container">
-
-                <div className="signin-window">
-
-                    <h1 className="center form-text-color">Sign In</h1>
-
-                    <form className="signin-form">
-                        <label className="form-text-color form-text">E-mail</label>
-                        <input className="signin-input form-text-color"
-                               type="email"
-                               name="username"
-                               onChange={handleEmailChange}
-                        />
-
-                        <label className="form-text form-text-color">Password</label>
-                        <input className="signin-input form-text-color"
-                               type="password"
-                               name="password"
-                               onChange={handlePwChange}
-                        />
-
-                        <div className="signin-button center">
-                            <a className="cta-button-form" href="#" onClick={submitSignin} type="submit" >
-                                Sign In
-                            </a>
-                        </div>
-
-                    </form>
-
-                    <div className="center form-text-color signin-footer">
-                        Don't have an account? <Link className="signin-footer" to="/apply"><a href="#">Apply</a></Link>
-
-
-                        {/*Delete when auth logic done*/}
-                            <br/><Link to="/profile" >Temp Login</Link>
-                        {/*--------------------------------------*/}
-
-                    </div>
-
-                </div>
-
-            </div>
-
+      <div className="navbar">
+        <div className="container">
+          <div className="navbar__logo">
+            <Logo />
+          </div>
         </div>
+      </div>
 
-    )
-}
+      <div className="template-container signin-container">
+        <div className="signin-window">
+          <h1 className="center form-text-color">Sign In</h1>
 
+          <form className="signin-form">
+            <label className="form-text-color form-text">E-mail</label>
+            <input
+              className="signin-input form-text-color"
+              type="email"
+              name="email"
+              onChange={handleEmailChange}
+            />
 
+            <label className="form-text form-text-color">Password</label>
+            <input
+              className="signin-input form-text-color"
+              type="password"
+              name="password"
+              onChange={handlePwChange}
+            />
 
-export default SignIn;
+            <div className="signin-button center">
+              <a className="cta-button-form" onClick={submitSignin}>
+                Sign In
+              </a>
+            </div>
+          </form>
+
+          <div className="center form-text-color signin-footer">
+            Don't have an account?{" "}
+            <Link className="signin-footer" to="/apply">
+              <a href="#">Apply</a>
+            </Link>
+            {/*Delete when auth logic done*/}
+            <br />
+            <Link to="/register">Register</Link>
+            {/*--------------------------------------*/}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default withRouter(SignIn);
