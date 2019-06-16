@@ -1,17 +1,14 @@
-import React from 'react';
-import '../../main.css';
-import Logo from '../Logo/Logo';
-
+import React from "react"
+import "../../main.css"
+import Logo from "../Logo/Logo"
 
 const Background = () => {
-
-    return(
+    return (
         <div>
-
             <div className="navbar">
                 <div className="container">
                     <div className="navbar__logo">
-                        <Logo/>
+                        <Logo />
                     </div>
                 </div>
             </div>
@@ -23,12 +20,8 @@ const Background = () => {
                 <div className="rectangle rectangle-3" />
                 <div className="rectangle rectangle-4" />
             </div>
-
         </div>
-
     )
 }
 
-
-
-export default Background;
+export default Background
