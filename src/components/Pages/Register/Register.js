@@ -5,7 +5,7 @@ import "../../../main.css"
 import "../SignIn/SignIn.css"
 import "./Register.css"
 
-const Register = () => {
+const Register = ({ history }) => {
     const [email, setEmail] = useState(null)
     const [firstname, setFirstname] = useState(null)
     const [lastname, setLastname] = useState(null)
@@ -50,10 +50,9 @@ const Register = () => {
                     .then(resp => resp.json())
                     .then(user => {
                         if (user) {
-                            // Set user as authenticated and redirect user to app
-                            auth.login(() =>
-                                window.location.assign("http://localhost:3000/")
-                            )
+                            // Redirecting to signin page. Normally the person should be able to
+                            // by confirming his/her email address by mail, but for now this is the only safe way.
+                            auth.login(() => history.push("/signin"))
                         }
                     })
             } else {
