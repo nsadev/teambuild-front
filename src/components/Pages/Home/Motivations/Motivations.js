@@ -67,8 +67,6 @@ const Motivations = () => {
                 </p>
               </div>
             </div>
-        </div>
-        <div>
           <div className="motiv-button">
             <GetStartedButton/>
           </div>
