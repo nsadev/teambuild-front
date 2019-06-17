@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Link, Redirect, withRouter } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 import Logo from "../../Logo/Logo"
 import auth from "../../../utils/Auth"
@@ -7,7 +7,7 @@ import auth from "../../../utils/Auth"
 import "./SignIn.css"
 import "../../../main.css"
 
-const SignIn = ({ getUser, history }) => {
+const SignIn = () => {
     const [email, setEmail] = useState(undefined)
     const [password, setPassword] = useState(undefined)
 
@@ -33,17 +33,13 @@ const SignIn = ({ getUser, history }) => {
             .then(resp => resp.json())
             .then(user => {
                 if (user) {
-                    // User object updating in App.js
-                    getUser(user)
-                    // Redirect user to profile page
-                    auth.login(() => history.push("/profile"))
+                    // Set user as authenticated and redirect user to app
+                    auth.login(() =>
+                        window.location.assign("http://localhost:3000/")
+                    )
                 }
             })
     }
-
-    // if (authenticated === true) {
-    //   return <Redirect to="/profile" />;
-    // }
 
     return (
         <div>
@@ -114,4 +110,4 @@ const SignIn = ({ getUser, history }) => {
     )
 }
 
-export default withRouter(SignIn)
+export default SignIn

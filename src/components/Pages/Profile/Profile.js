@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from "react"
-import "./Profile.css"
-import "../../../main.css"
 import ProfileNavbar from "./ProfileNavbar/ProfileNavbar"
 import ProfileFooter from "./ProfileFooter/ProfileFooter"
+import "./Profile.css"
+import "../../../main.css"
 
-const Profile = props => {
-    console.log(props)
-    //   console.log(firstname);
+const Profile = () => {
     return (
         <div>
             <ProfileNavbar />
-            <p>Hello, {props.firstname}!</p>
+            <p>Hello, !</p>
             <ProfileFooter />
         </div>
     )

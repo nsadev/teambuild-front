@@ -1,9 +1,9 @@
 import React, { useState } from "react"
+import Background from "../../Background/Background"
+import auth from "../../../utils/Auth"
 import "../../../main.css"
 import "../SignIn/SignIn.css"
 import "./Register.css"
-import Background from "../../Background/Background"
-import { Link } from "react-router-dom"
 
 const Register = () => {
     const [email, setEmail] = useState(null)
@@ -50,8 +50,10 @@ const Register = () => {
                     .then(resp => resp.json())
                     .then(user => {
                         if (user) {
-                            //redirect to the profile page
-                            console.log(user)
+                            // Set user as authenticated and redirect user to app
+                            auth.login(() =>
+                                window.location.assign("http://localhost:3000/")
+                            )
                         }
                     })
             } else {
