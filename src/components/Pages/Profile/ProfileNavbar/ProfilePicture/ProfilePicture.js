@@ -32,7 +32,7 @@ const ProfilePicture = ({ userImg, userSettings, userLogout }) => {
                 >
                     <img
                         className="userNav__img-wrapper__img"
-                        src={userImg}
+                        src="http://true-education.org/wp-content/uploads/2015/10/facebook-profile-picture-unknown-facts-about-facebook.jpg"
                         alt="user profile"
                         onMouseEnter={() => userMouse(1)}
                     />
