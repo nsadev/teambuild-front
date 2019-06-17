@@ -5,13 +5,31 @@ import "./Profile.css"
 import "../../../main.css"
 
 const Profile = () => {
-    return (
-        <div>
-            <ProfileNavbar />
-            <p>Hello, !</p>
-            <ProfileFooter />
-        </div>
-    )
+    const [user, setUser] = useState(undefined)
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        fetch("/user")
+            .then(res => res.json())
+            .then(user => {
+                setUser(user)
+                setLoading(false)
+            })
+    }, [])
+
+    if (loading) {
+        return <div> Loading </div>
+    } else {
+        return (
+            <div>
+                <ProfileNavbar />
+                <p>
+                    Hello, {user.first_name} {user.last_name}!
+                </p>
+                <ProfileFooter />
+            </div>
+        )
+    }
 }
 
 export default Profile
