@@ -4,6 +4,7 @@ import Home from "./Pages/Home"
 import SignIn from "./Pages/SignIn/SignIn"
 import Profile from "./Pages/Profile/Profile"
 import Register from "./Pages/Register/Register"
+import Apply from "./Pages/Apply/Apply"
 import auth from "../utils/Auth"
 import "./App.css"
 
@@ -23,6 +24,7 @@ const App = () => {
                     <Route path="/" exact component={Home} />
                     <Route path="/signin" exact component={SignIn} />
                     <Route path="/register" exact component={Register} />
+                    <Route path='/apply' exact component={Apply} />
                 </Switch>
             </BrowserRouter>
         )
