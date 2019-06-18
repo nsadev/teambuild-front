@@ -11,6 +11,7 @@ const Register = ({ history }) => {
     const [lastname, setLastname] = useState(null)
     const [password, setPassword] = useState(null)
     const [confPw, setConfPw] = useState(null)
+    const [message, setMessage] = useState(null)
 
     function emailChange(e) {
         setEmail(e.target.value)
@@ -36,30 +37,37 @@ const Register = ({ history }) => {
         //add feedback messages
 
         if (email && firstname && lastname && password && confPw) {
-            if (password === confPw && password.length >= 8) {
-                fetch("/user/register", {
-                    method: "post",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({
-                        email: email,
-                        first_name: firstname,
-                        last_name: lastname,
-                        password: password,
-                    }),
-                })
-                    .then(resp => resp.json())
-                    .then(user => {
-                        if (user) {
-                            // Redirecting to signin page. Normally the person should be able to
-                            // by confirming his/her email address by mail, but for now this is the only safe way.
-                            auth.login(() => history.push("/"))
-                        }
+            if(password.length >= 8) {
+                if (password === confPw) {
+                    fetch("/user/register", {
+                        method: "post",
+                        headers: {"Content-Type": "application/json"},
+                        body: JSON.stringify({
+                            email: email,
+                            first_name: firstname,
+                            last_name: lastname,
+                            password: password,
+                        }),
                     })
-            } else {
-                console.log("Passwords are not matching or too short")
+                        .then(resp => resp.json())
+                        .then(user => {
+                            if (user) {
+                                // Redirecting to the profile page. As admin is able to add new registration for now
+                                // by confirming his/her email address by mail, but for now this is the only safe way.
+                                setMessage(user.message)
+                                if(user.message === "Registration successful"){
+                                    auth.login(() => history.push("/"))
+                                }
+                            }
+                        })
+                } else {
+                    setMessage("Passwords are not matching")
+                }
+            }else {
+                setMessage("Password is too short")
             }
         } else {
-            console.log("Every fields are mandatory")
+            setMessage("Every fields are mandatory")
         }
     }
 
@@ -125,6 +133,8 @@ const Register = ({ history }) => {
                             id="confPw"
                             onChange={confPwChange}
                         />
+
+                        <div className="error-msg center"><p>{message}</p></div>
 
                         <div className="signin-button center">
                             <a

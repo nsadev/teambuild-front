@@ -14,7 +14,6 @@ const Profile = () => {
             .then(res => res.json())
             .then(user => {
                 auth.isAdmin(user)
-                console.log('1.admin', auth.admin)
                 setUser(user)
                 setLoading(false)
             })

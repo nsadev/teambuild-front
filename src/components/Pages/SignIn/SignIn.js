@@ -11,6 +11,7 @@ const SignIn = () => {
     const [email, setEmail] = useState(undefined)
     const [password, setPassword] = useState(undefined)
 
+
     function handleEmailChange(e) {
         setEmail(e.target.value)
     }
@@ -95,9 +96,9 @@ const SignIn = () => {
                     </form>
 
                     <div className="center form-text-color signin-footer">
-                        Don't have an account?{" "}
+                        Don't have an account?
                         <Link className="signin-footer" to="/apply">
-                            <a href="#">Apply</a>
+                            <a href="#"> Apply</a>
                         </Link>
                     </div>
                 </div>
