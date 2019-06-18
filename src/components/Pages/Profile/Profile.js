@@ -1,19 +1,35 @@
-import React, { useState, useEffect } from "react";
-import "./Profile.css";
-import "../../../main.css";
-import ProfileNavbar from "./ProfileNavbar/ProfileNavbar";
-import ProfileFooter from "./ProfileFooter/ProfileFooter";
+import React, { useState, useEffect } from "react"
+import ProfileNavbar from "./ProfileNavbar/ProfileNavbar"
+import ProfileFooter from "./ProfileFooter/ProfileFooter"
+import "./Profile.css"
+import "../../../main.css"
 
-const Profile = props => {
-  console.log(props);
-  //   console.log(firstname);
-  return (
-    <div>
-      <ProfileNavbar />
-      <p>Hello, {props.firstname}!</p>
-      <ProfileFooter />
-    </div>
-  );
-};
+const Profile = () => {
+    const [user, setUser] = useState(undefined)
+    const [loading, setLoading] = useState(true)
 
-export default Profile;
+    useEffect(() => {
+        fetch("/user")
+            .then(res => res.json())
+            .then(user => {
+                setUser(user)
+                setLoading(false)
+            })
+    }, [])
+
+    if (loading) {
+        return <div> Loading </div>
+    } else {
+        return (
+            <div>
+                <ProfileNavbar />
+                <p>
+                    Hello, {user.first_name} {user.last_name}!
+                </p>
+                <ProfileFooter />
+            </div>
+        )
+    }
+}
+
+export default Profile
