@@ -13,6 +13,7 @@ const Profile = () => {
             .then(res => res.json())
             .then(user => {
                 setUser(user)
+                console.log('user',user)
                 setLoading(false)
             })
     }, [])
@@ -22,7 +23,7 @@ const Profile = () => {
     } else {
         return (
             <div>
-                <ProfileNavbar />
+                <ProfileNavbar user={user} />
                 <p>
                     Hello, {user.first_name} {user.last_name}!
                 </p>
