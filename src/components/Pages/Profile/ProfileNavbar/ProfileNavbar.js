@@ -19,12 +19,11 @@ const ProfileNavbar = ({user}) => {
 
                     {
                         (user.isadmin)
-                            ?   <div className="navbar__links">
-                                    <Link className="navbar__links link blue" to="/register">
+                            ?   <Link className="navbar__links link blue" to="/register">
                                     Add new member
-                                    </Link>
-                                </div>
-                            :   <div></div>
+                                </Link>
+
+                            :   null
                     }
 
                     <Link className="navbar__links link blue" to="#">
