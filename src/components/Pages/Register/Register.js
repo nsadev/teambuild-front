@@ -52,8 +52,8 @@ const Register = ({ history }) => {
                         .then(resp => resp.json())
                         .then(user => {
                             if (user) {
-                                // Redirecting to the profile page. As admin is able to add new registration for now
-                                // by confirming his/her email address by mail, but for now this is the only safe way.
+                                // Redirecting to the profile page. As only admin is able to add
+                                // new registration in the beginning
                                 setMessage(user.message)
                                 if(user.message === "Registration successful"){
                                     auth.login(() => history.push("/"))
