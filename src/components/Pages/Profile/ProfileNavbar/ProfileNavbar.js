@@ -18,6 +18,7 @@ const ProfileNavbar = ({user}) => {
                 <div className="navbar__links">
 
                     {
+                        // If the logged in user is an admin register option reveal
                         (user.isadmin)
                             ?   <Link className="navbar__links link blue" to="/register">
                                     Add new member

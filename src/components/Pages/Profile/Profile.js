@@ -3,6 +3,7 @@ import ProfileNavbar from "./ProfileNavbar/ProfileNavbar"
 import ProfileFooter from "./ProfileFooter/ProfileFooter"
 import "./Profile.css"
 import "../../../main.css"
+import auth from '../../../utils/Auth'
 
 const Profile = () => {
     const [user, setUser] = useState(undefined)
@@ -12,8 +13,9 @@ const Profile = () => {
         fetch("/user")
             .then(res => res.json())
             .then(user => {
+                auth.isAdmin(user)
+                console.log('1.admin', auth.admin)
                 setUser(user)
-                console.log('user',user)
                 setLoading(false)
             })
     }, [])
@@ -23,6 +25,7 @@ const Profile = () => {
     } else {
         return (
             <div>
+
                 <ProfileNavbar user={user} />
                 <p>
                     Hello, {user.first_name} {user.last_name}!

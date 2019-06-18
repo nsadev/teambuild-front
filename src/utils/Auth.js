@@ -2,11 +2,13 @@ import Cookies from "js-cookie"
 
 class Auth {
     constructor() {
+        this.admin = false
         if (Cookies.get("teambuildPublic")) {
             this.authenticated = true
             return
         }
         this.authenticated = false
+
     }
 
     login(cb) {
@@ -22,6 +24,14 @@ class Auth {
 
     isAuthenticated() {
         return this.authenticated
+    }
+
+    isAdmin(user) {
+        if(user.isadmin){
+            this.admin = true
+        }
+
+        return this.admin
     }
 }
 

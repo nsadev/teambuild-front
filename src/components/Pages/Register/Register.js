@@ -52,7 +52,7 @@ const Register = ({ history }) => {
                         if (user) {
                             // Redirecting to signin page. Normally the person should be able to
                             // by confirming his/her email address by mail, but for now this is the only safe way.
-                            auth.login(() => history.push("/signin"))
+                            auth.login(() => history.push("/"))
                         }
                     })
             } else {
