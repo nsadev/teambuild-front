@@ -114,6 +114,7 @@ const Register = ({ history }) => {
 
                         <label className="form-text-color form-text">
                             Password
+                            <ins className="field-info"> minimum 8 characters</ins>
                         </label>
                         <input
                             className="signin-input form-text-color"
