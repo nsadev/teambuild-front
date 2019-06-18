@@ -3,6 +3,7 @@ import "../../../../main.css"
 import { Link } from "react-router-dom"
 import Logo from "../../../Logo/Logo"
 import ProfilePicture from "./ProfilePicture/ProfilePicture"
+import auth from '../../../../utils/Auth'
 
 const ProfileNavbar = ({user}) => {
 
@@ -13,6 +14,11 @@ const ProfileNavbar = ({user}) => {
             <div className="container">
                 <div className="navbar__logo">
                     <Logo />
+                    {
+                        (auth.admin)
+                        ? <div className="admin-sign purple">ADMIN</div>
+                        : null
+                    }
                 </div>
 
                 <div className="navbar__links">
