@@ -99,10 +99,6 @@ const SignIn = () => {
                         <Link className="signin-footer" to="/apply">
                             <a href="#">Apply</a>
                         </Link>
-                        {/*Delete when auth logic done*/}
-                        <br />
-                        <Link to="/register">Register</Link>
-                        {/*--------------------------------------*/}
                     </div>
                 </div>
             </div>
