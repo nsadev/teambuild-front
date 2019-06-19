@@ -13,8 +13,7 @@ const Apply = props => {
     const [role, setRole] = useState(null)
     const [stack, setStack] = useState(null)
     const [joinReason, setJoinReason] = useState(null)
-
-    //ad feedback messages
+    const [message, setMessage] = useState(null)
 
 
     function onEmailChange(e) {
@@ -60,15 +59,15 @@ const Apply = props => {
                     }),
                 }).then(response => response.json())
                     .then(data => {
-                        console.log(data.message)
+                        setMessage(data.message)
                     })
 
             } catch (e) {
-                console.log(e)
+                setMessage(e)
             }
 
         } else {
-            console.log("Every field are mandatory")
+            setMessage("Every fields are mandatory")
         }
 
 
@@ -144,6 +143,8 @@ const Apply = props => {
                             name="joinReason"
                             onChange={onJoinChange}
                         />
+
+                        <div className="error-msg center"><p>{message}</p></div>
 
                         <div className="apply-button center">
                             <a
