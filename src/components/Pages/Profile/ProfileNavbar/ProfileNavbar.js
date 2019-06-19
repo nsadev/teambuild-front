@@ -1,4 +1,5 @@
 import React from "react"
+import "./ProfileNavbar.css"
 import "../../../../main.css"
 import { Link } from "react-router-dom"
 import Logo from "../../../Logo/Logo"
@@ -43,6 +44,7 @@ const ProfileNavbar = ({user}) => {
                 </div>
 
                 <ProfilePicture />
+                <div className="username-tag" ><p>{user.first_name} {user.last_name}</p></div>
             </div>
         </div>
     )
