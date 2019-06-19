@@ -19,6 +19,8 @@ const ProfilePicture = ({ userImg, userSettings, userLogout }) => {
         setHover(e)
     }
     const signedIn = e => {
+        // Deleting a key-value pair in localStorage. This is to remove the Loading Icon.
+        localStorage.removeItem("teambuild")
         auth.logout(window.location.assign("http://localhost:3000/signin"))
     }
 
