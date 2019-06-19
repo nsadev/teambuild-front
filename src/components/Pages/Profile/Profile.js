@@ -25,9 +25,7 @@ const Profile = () => {
         return (
             <div>
                 <ProfileNavbar user={user} />
-                <p>
-                    Hello, {user.first_name} {user.last_name}!
-                </p>
+
                 <ProfileFooter />
             </div>
         )
