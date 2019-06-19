@@ -37,33 +37,13 @@
     margin: 30px 0 50px 0;
 }
 
-.form-text {
-    font-size: 18px;
-}
-
-.form-text-color {
-    color: #666666;
-}
-
-
-.apply-footer > a {
-    color: #4eb9f4;
-    text-decoration: none;
-}
-
 
 .text-area {
     height: 80px;
-    font-size: 14px;
+    font-size: 15px;
     resize: none;
 }
 
-
-.label-text-area {
-    color: #666666;
-    font-size: 18px;
-  
-}
 
 .radio-buttons {
     margin: 20px 0 40px 30px;
