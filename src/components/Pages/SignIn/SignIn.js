@@ -25,6 +25,7 @@ const SignIn = () => {
             try {
                 fetch("/user/login", {
                     method: "post",
+                    credentials: "same-origin",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({
                         email: email,
