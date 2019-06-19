@@ -21,11 +21,11 @@ const SignIn = () => {
     }
 
     const submitSignin = () => {
-        if(email && password) {
+        if (email && password) {
             try {
                 fetch("/user/login", {
                     method: "post",
-                    headers: {"Content-Type": "application/json"},
+                    headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({
                         email: email,
                         password: password,
@@ -34,6 +34,8 @@ const SignIn = () => {
                     .then(resp => resp.json())
                     .then(user => {
                         if (user.message === "Login successful") {
+                            // Set key-value pair in LocalStorage for Loader Icon.
+                            localStorage.setItem("teambuild", "true")
                             // Set user as authenticated and redirect user to app
                             auth.login(() =>
                                 window.location.assign("http://localhost:3000/")
@@ -43,7 +45,9 @@ const SignIn = () => {
                         }
                     })
             } catch (e) {
-                setMessage("Server is not available, check your connection or try again later")
+                setMessage(
+                    "Server is not available, check your connection or try again later"
+                )
             }
         } else {
             setMessage("Please provide your E-mail and Password")
@@ -93,7 +97,9 @@ const SignIn = () => {
                             onChange={handlePwChange}
                         />
 
-                        <div className="error-msg center"><p>{message}</p></div>
+                        <div className="error-msg center">
+                            <p>{message}</p>
+                        </div>
 
                         <div className="signin-button center">
                             <a

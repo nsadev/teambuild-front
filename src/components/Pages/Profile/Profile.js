@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react"
 import ProfileNavbar from "./ProfileNavbar/ProfileNavbar"
 import ProfileFooter from "./ProfileFooter/ProfileFooter"
 import auth from "../../../utils/Auth"
-import loader from "../../../static/loader.svg"
 import "./Profile.css"
 import "../../../main.css"
 
@@ -21,7 +20,7 @@ const Profile = () => {
     }, [])
 
     if (loading) {
-        return <img class="loader" src={loader} alt="Loading"></img>
+        return null
     } else {
         return (
             <div>
