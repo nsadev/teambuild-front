@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react"
 import ProfileNavbar from "./ProfileNavbar/ProfileNavbar"
 import ProfileFooter from "./ProfileFooter/ProfileFooter"
+import auth from "../../../utils/Auth"
 import "./Profile.css"
 import "../../../main.css"
-import auth from '../../../utils/Auth'
 
 const Profile = () => {
     const [user, setUser] = useState(undefined)
@@ -20,11 +20,10 @@ const Profile = () => {
     }, [])
 
     if (loading) {
-        return <div> Loading </div>
+        return null
     } else {
         return (
             <div>
-
                 <ProfileNavbar user={user} />
                 <p>
                     Hello, {user.first_name} {user.last_name}!
