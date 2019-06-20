@@ -10,9 +10,9 @@
 .apply-window {
     position: relative;
     grid-column: 2 / 2;
-    margin: 100px 0 0 0;
+    margin: 20px 0 0 0;
     width: 500px;
-    height: 750px;
+    height: 920px;
     background-color: white;
 
     -webkit-box-shadow: 0px 12px 32px rgba(0,0,0,0.1);
@@ -30,49 +30,21 @@
 }
 
 .apply-input {
-    width: 100%;
-    height: 40px;
-    border: 1px solid #dadada;
-    box-sizing: border-box;
-    border-radius: 8px;
-    margin-bottom: 50px;
-    font-size: 22px;
-    padding-left: 10px;
+    margin-bottom: 25px;
 }
 
 .apply-button {
     margin: 30px 0 50px 0;
 }
 
-.form-text {
-    font-size: 18px;
-}
-
-.form-text-color {
-    color: #666666;
-}
-
-
-.apply-footer > a {
-    color: #4eb9f4;
-    text-decoration: none;
-}
-
 
 .text-area {
-    padding: 25px;
-    line-height: 1.5;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-shadow: 1px 1px 1px #999;
-    margin: 2rem;
-    width: 20rem;
-    
+    height: 80px;
+    font-size: 15px;
+    resize: none;
 }
 
 
-.label-text-area {
-    color: #666666;
-    font-size: 18px;
-  
+.radio-buttons {
+    margin: 20px 0 40px 30px;
 }
