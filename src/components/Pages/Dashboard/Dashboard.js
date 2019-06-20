@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react"
-import ProfileNavbar from "./ProfileNavbar/ProfileNavbar"
-import ProfileFooter from "./ProfileFooter/ProfileFooter"
+import DashboardNavbar from "./DashboardNavbar/DashboardNavbar"
+import DashboardFooter from "./DashboardFooter/DashboardFooter"
+import Projects from "../Projects/Projects"
 import auth from "../../../utils/Auth"
-import "./Profile.css"
+import "./Dashboard.css"
 import "../../../main.css"
 
 const Profile = () => {
@@ -24,9 +25,9 @@ const Profile = () => {
     } else {
         return (
             <div>
-                <ProfileNavbar user={user} />
-
-                <ProfileFooter />
+                <DashboardNavbar user={user} />
+                <Projects />
+                <DashboardFooter />
             </div>
         )
     }
