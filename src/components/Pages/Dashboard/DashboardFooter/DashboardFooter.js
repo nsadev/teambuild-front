@@ -1,5 +1,5 @@
 import React from "react"
-import "./ProfileFooter.css"
+import "./DashboardFooter.css"
 
 const ProfileFooter = () => {
     const year = new Date().getFullYear()

@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import auth from "../../../../../utils/Auth"
-import "./ProfilePicture.css"
+import "./DashboardPicture.css"
 
 /* Props list:
 
