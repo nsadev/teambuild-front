@@ -8,7 +8,7 @@ import auth from "../../../../utils/Auth"
 
 const ProfileNavbar = ({ user }) => {
     return (
-        <div className="navbar">
+        <div className="navbar dashboard-navbar">
             <div className="container">
                 <div className="navbar__logo">
                     <Logo />
