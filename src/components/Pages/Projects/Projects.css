@@ -80,7 +80,7 @@
 .page__projects {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 180px;
+    padding-bottom: 180px;
 }
 
 .page__project {
