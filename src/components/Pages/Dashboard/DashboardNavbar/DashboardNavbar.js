@@ -9,8 +9,8 @@ import auth from "../../../../utils/Auth"
 const ProfileNavbar = ({ user }) => {
     return (
         <div className="navbar dashboard-navbar">
-            <div className="container">
-                <div className="navbar__logo">
+            <div className="dashboard-container">
+                <div className="dashboard__navbar__logo">
                     <Logo />
                     {auth.admin ? (
                         <div className="admin-sign purple">ADMIN</div>

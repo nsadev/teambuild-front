@@ -7,6 +7,11 @@
     width: 1440px;
 }
 
+.dashboard-container {
+    display: flex;
+    width: 100%;
+}
+
 /********************************************
     NAVIGATION BAR
 *********************************************/
@@ -21,6 +26,11 @@
 .navbar__logo {
     flex-grow: 3;
     margin-left: 64px;
+    align-self: center;
+}
+
+.dashboard__navbar__logo {
+    flex-grow: 3;
     align-self: center;
 }
 
