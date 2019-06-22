@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import DashboardNavbar from "./DashboardNavbar/DashboardNavbar"
 import DashboardFooter from "./DashboardFooter/DashboardFooter"
+import DashboardContent from "./DashboardContent/DashboardContent"
 import Projects from "../Projects/Projects"
 import auth from "../../../utils/Auth"
 import "./Dashboard.css"
@@ -26,7 +27,9 @@ const Profile = () => {
         return (
             <div>
                 <DashboardNavbar user={user} />
-                <Projects />
+                <DashboardContent>
+                    <Projects />
+                </DashboardContent>
                 <DashboardFooter />
             </div>
         )
