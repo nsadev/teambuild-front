@@ -3,6 +3,18 @@
     margin-right: 15px;
 }
 
+.dashboard__navbar__menu {
+    width: 51px;
+    align-self: center;
+}
+
+.dashboard__navbar__menu__button {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+}
+
 .username-tag {
     margin-left: 25px;
     font-weight: bold;

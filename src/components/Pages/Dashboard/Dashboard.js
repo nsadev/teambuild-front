@@ -6,10 +6,17 @@ import Projects from "../Projects/Projects"
 import auth from "../../../utils/Auth"
 import "./Dashboard.css"
 import "../../../main.css"
+import { NONAME } from "dns"
 
 const Profile = () => {
     const [user, setUser] = useState(undefined)
     const [loading, setLoading] = useState(true)
+    const [sideNavStyle, setSideNavStyle] = useState({
+        "flex-basis": "65px",
+    })
+    const [sideNavTextStyle, setSideNavTextStyle] = useState({
+        display: "none",
+    })
 
     useEffect(() => {
         fetch("/user")
@@ -21,13 +28,35 @@ const Profile = () => {
             })
     }, [])
 
+    const openSideNav = () => {
+        if (sideNavStyle["flex-basis"] === "250px") {
+            setSideNavStyle({
+                "flex-basis": "65px",
+            })
+            setSideNavTextStyle({
+                display: "none",
+            })
+            return
+        }
+        setSideNavStyle({
+            "flex-basis": "250px",
+        })
+        setSideNavTextStyle({
+            display: "inline",
+        })
+    }
+
     if (loading) {
         return null
     } else {
         return (
+            // All components for the dashboard should be rendered in the DashboardContent Component.
             <div>
-                <DashboardNavbar user={user} />
-                <DashboardContent>
+                <DashboardNavbar openSideNav={openSideNav} user={user} />
+                <DashboardContent
+                    sideNavStyle={sideNavStyle}
+                    sideNavTextStyle={sideNavTextStyle}
+                >
                     <Projects />
                 </DashboardContent>
                 <DashboardFooter />

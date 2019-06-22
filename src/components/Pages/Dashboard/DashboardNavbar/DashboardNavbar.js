@@ -5,18 +5,26 @@ import { Link } from "react-router-dom"
 import Logo from "../../../Logo/Logo"
 import ProfilePicture from "./DashboardPicture/DashboardPicture"
 import auth from "../../../../utils/Auth"
+import menu from "./baseline-menu-24px.svg"
 
-const ProfileNavbar = ({ user }) => {
+const ProfileNavbar = ({ user, openSideNav }) => {
     return (
         <div className="navbar dashboard-navbar">
             <div className="dashboard-container">
+                <div className="dashboard__navbar__menu">
+                    <button
+                        className="dashboard__navbar__menu__button"
+                        onClick={openSideNav}
+                    >
+                        <img src={menu}></img>
+                    </button>
+                </div>
                 <div className="dashboard__navbar__logo">
                     <Logo />
                     {auth.admin ? (
                         <div className="admin-sign purple">ADMIN</div>
                     ) : null}
                 </div>
-
                 <div className="navbar__links">
                     {// If the logged in user is an admin register option reveal
                     user.isadmin ? (
@@ -36,7 +44,6 @@ const ProfileNavbar = ({ user }) => {
                         Create new project
                     </Link>
                 </div>
-
                 <ProfilePicture />
                 <div className="username-tag">
                     <p>
