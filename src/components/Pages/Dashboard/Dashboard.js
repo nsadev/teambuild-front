@@ -6,7 +6,6 @@ import Projects from "../Projects/Projects"
 import auth from "../../../utils/Auth"
 import "./Dashboard.css"
 import "../../../main.css"
-import { NONAME } from "dns"
 
 const Profile = () => {
     const [user, setUser] = useState(undefined)

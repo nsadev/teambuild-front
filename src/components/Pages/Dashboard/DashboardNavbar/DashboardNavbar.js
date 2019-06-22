@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 import Logo from "../../../Logo/Logo"
 import ProfilePicture from "./DashboardPicture/DashboardPicture"
 import auth from "../../../../utils/Auth"
-import menu from "./baseline-menu-24px.svg"
+import menu from "../../../../static/baseline-menu-24px.svg"
 
 const ProfileNavbar = ({ user, openSideNav }) => {
     return (

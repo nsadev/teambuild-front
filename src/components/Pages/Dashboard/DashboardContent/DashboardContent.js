@@ -1,8 +1,8 @@
 import React from "react"
 import "./DashboardContent.css"
-import add from "./baseline-add-24px.svg"
-import addPerson from "./baseline-person_add-24px.svg"
-import message from "./baseline-message-24px.svg"
+import add from "../../../../static/baseline-add-24px.svg"
+import addPerson from "../../../../static/baseline-person_add-24px.svg"
+import message from "../../../../static/baseline-message-24px.svg"
 
 const DashboardContent = ({ children, sideNavStyle, sideNavTextStyle }) => {
     return (
