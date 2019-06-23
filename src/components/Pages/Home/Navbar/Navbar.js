@@ -49,9 +49,12 @@ const Navbar = () => {
                                 Apply for membership
                             </a>
                         </Link>
-                        <a className="navbar__links__link link black" href="#">
+                        <Link
+                            className="navbar__links__link link black"
+                            to="/projects"
+                        >
                             View Projects
-                        </a>
+                        </Link>
                         <Link className="link" to="/signin">
                             <a className="login-button" href="#">
                                 Log in
