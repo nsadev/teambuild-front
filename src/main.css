@@ -75,6 +75,13 @@
     BUTTONS
 *********************************************/
 
+.button__without__styling {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+}
+
 .login-button {
     color: #333333;
     border: 2px solid #333333;
