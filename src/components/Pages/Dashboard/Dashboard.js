@@ -11,7 +11,7 @@ const Dashboard = () => {
     const [user, setUser] = useState(undefined)
     const [loading, setLoading] = useState(true)
     const [sideNavStyle, setSideNavStyle] = useState({
-        "flex-basis": "65px",
+        flexBasis: "65px",
     })
     const [sideNavTextStyle, setSideNavTextStyle] = useState({
         display: "none",
@@ -28,9 +28,9 @@ const Dashboard = () => {
     }, [])
 
     const openSideNav = () => {
-        if (sideNavStyle["flex-basis"] === "250px") {
+        if (sideNavStyle["flexBasis"] === "250px") {
             setSideNavStyle({
-                "flex-basis": "65px",
+                flexBasis: "65px",
             })
             setSideNavTextStyle({
                 display: "none",
@@ -38,7 +38,7 @@ const Dashboard = () => {
             return
         }
         setSideNavStyle({
-            "flex-basis": "250px",
+            flexBasis: "250px",
         })
         setSideNavTextStyle({
             display: "inline",
