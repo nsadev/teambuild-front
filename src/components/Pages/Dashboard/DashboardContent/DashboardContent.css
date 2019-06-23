@@ -15,6 +15,7 @@
 
 .dashboard__item {
     display: flex;
+    /* flex-direction: column; */
     padding-top: 25px;
     padding-left: 20px;
     white-space: nowrap;
@@ -27,6 +28,33 @@
 }
 
 .dashboard__item__icon {
+    align-self: flex-start;
     color: #333;
     padding-right: 20px;
+}
+
+.dashboard__item__upper-menu {
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+.dashboard__item__lower-menu {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#menu__click {
+    display: none;
+}
+
+#menu__click:checked + label > div > span {
+    display: block;
+}
+
+.testingthis {
+    display: none;
+    font-weight: normal;
+    padding-top: 10px;
+    padding-left: 10px;
 }
