@@ -8,12 +8,9 @@
     align-self: center;
 }
 
-.dashboard__navbar__menu__button {
-    border: none;
-    background-color: transparent;
-    outline: none;
-    cursor: pointer;
-}
+/* .dashboard__navbar__menu:focus > .testingthis {
+    display: block;
+} */
 
 .username-tag {
     margin-left: 25px;

@@ -13,7 +13,7 @@ const ProfileNavbar = ({ user, openSideNav }) => {
             <div className="dashboard-container">
                 <div className="dashboard__navbar__menu">
                     <button
-                        className="dashboard__navbar__menu__button"
+                        className="button__without__styling"
                         onClick={openSideNav}
                     >
                         <img src={menu}></img>
