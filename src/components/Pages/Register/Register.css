@@ -1,0 +1,30 @@
+.background {
+    position: relative;
+}
+
+.content-box {
+    position: absolute;
+    z-index: 5;
+    top: 100px;
+    width: 100%;
+}
+
+.register-window {
+    position: relative;
+    grid-column: 2 / 2;
+    margin-top: 30px;
+    width: 500px;
+    height: 800px;
+    background-color: white;
+
+    -webkit-box-shadow: 0px 12px 32px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 12px 32px rgba(0,0,0,0.1);
+    box-shadow: 0px 12px 32px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.field-info {
+    font-size: 12px;
+    text-decoration: none;
+    color: gray;
+}
