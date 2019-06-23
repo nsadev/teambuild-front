@@ -7,7 +7,7 @@ import ProfilePicture from "./DashboardPicture/DashboardPicture"
 import auth from "../../../../utils/Auth"
 import menu from "../../../../static/baseline-menu-24px.svg"
 
-const ProfileNavbar = ({ user, openSideNav }) => {
+const DashboardNavbar = ({ user, openSideNav }) => {
     return (
         <div className="navbar dashboard-navbar">
             <div className="dashboard-container">
@@ -54,4 +54,4 @@ const ProfileNavbar = ({ user, openSideNav }) => {
         </div>
     )
 }
-export default ProfileNavbar
+export default DashboardNavbar

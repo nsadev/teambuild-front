@@ -7,7 +7,7 @@ import auth from "../../../utils/Auth"
 import "./Dashboard.css"
 import "../../../main.css"
 
-const Profile = () => {
+const Dashboard = () => {
     const [user, setUser] = useState(undefined)
     const [loading, setLoading] = useState(true)
     const [sideNavStyle, setSideNavStyle] = useState({
@@ -64,4 +64,4 @@ const Profile = () => {
     }
 }
 
-export default Profile
+export default Dashboard
