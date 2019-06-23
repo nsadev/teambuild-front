@@ -42,6 +42,8 @@ const Dashboard = () => {
         })
         setSideNavTextStyle({
             display: "inline",
+            position: "relative",
+            width: "165px",
         })
     }
 
