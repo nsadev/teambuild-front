@@ -62,5 +62,6 @@
 
 .dashboard__item__dropdown-button {
     position: absolute;
-    right: 3px;
+    margin-top: 2px;
+    right: 10px;
 }
