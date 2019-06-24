@@ -36,13 +36,19 @@
 }
 
 .dashboard__item__lower-menu {
-    flex-basis: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
     display: flex;
     flex-direction: column;
 }
 
 [id^="menu__click"] {
     display: none;
+}
+
+[id^="menu__click"]:checked + label > div {
+    transform: scaleY(1);
+    transition: transform 0.1s linear;
 }
 
 [id^="menu__click"]:checked + label > div > span {
