@@ -34,16 +34,19 @@ const Dashboard = () => {
             })
             setSideNavTextStyle({
                 display: "none",
+                width: "0px",
+                transition: "width 0.5s linear",
             })
             return
         }
         setSideNavStyle({
             flexBasis: "250px",
+            transition: "flex-basis 0.5s linear",
         })
         setSideNavTextStyle({
             display: "inline",
             position: "relative",
-            width: "165px",
+            width: "180px",
         })
     }
 

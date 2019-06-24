@@ -2,7 +2,3 @@
     display: flex;
     background-color: #f9fbff;
 }
-
-.dashboard__content {
-    flex-shrink: 20;
-}
