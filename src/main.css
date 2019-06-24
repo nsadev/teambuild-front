@@ -7,6 +7,11 @@
     width: 1440px;
 }
 
+.dashboard-container {
+    display: flex;
+    width: 100%;
+}
+
 /********************************************
     NAVIGATION BAR
 *********************************************/
@@ -21,6 +26,11 @@
 .navbar__logo {
     flex-grow: 3;
     margin-left: 64px;
+    align-self: center;
+}
+
+.dashboard__navbar__logo {
+    flex-grow: 3;
     align-self: center;
 }
 
@@ -65,6 +75,13 @@
     BUTTONS
 *********************************************/
 
+.button__without__styling {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+}
+
 .login-button {
     color: #333333;
     border: 2px solid #333333;
@@ -102,7 +119,7 @@
 }
 
 .cta-button-form {
-    background-color: #56c2ff;
+    background-color: #4eb9f4;
     box-sizing: border-box;
     border-radius: 8px;
     padding: 13px 63px;
