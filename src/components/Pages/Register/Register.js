@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import Background from "../../Background/Background"
+import EmptyNavbar from "../../EmptyNavbar/EmptyNavbar"
 import auth from "../../../utils/Auth"
 import "../../../main.css"
 import "../SignIn/SignIn.css"
@@ -37,11 +37,11 @@ const Register = ({ history }) => {
         //add feedback messages
 
         if (email && firstname && lastname && password && confPw) {
-            if(password.length >= 8) {
+            if (password.length >= 8) {
                 if (password === confPw) {
                     fetch("/user/register", {
                         method: "post",
-                        headers: {"Content-Type": "application/json"},
+                        headers: { "Content-Type": "application/json" },
                         body: JSON.stringify({
                             email: email,
                             first_name: firstname,
@@ -55,7 +55,9 @@ const Register = ({ history }) => {
                                 // Redirecting to the profile page. As only admin is able to add
                                 // new registration in the beginning
                                 setMessage(user.message)
-                                if(user.message === "Registration successful"){
+                                if (
+                                    user.message === "Registration successful"
+                                ) {
                                     auth.login(() => history.push("/"))
                                 }
                             }
@@ -63,7 +65,7 @@ const Register = ({ history }) => {
                 } else {
                     setMessage("Passwords are not matching")
                 }
-            }else {
+            } else {
                 setMessage("Password is too short")
             }
         } else {
@@ -73,7 +75,7 @@ const Register = ({ history }) => {
 
     return (
         <div>
-            <Background className="background" />
+            <EmptyNavbar />
             <div className="template-container signin-container">
                 <div className="register-window">
                     <h1 className="center form-text-color">Register</h1>
@@ -114,7 +116,10 @@ const Register = ({ history }) => {
 
                         <label className="form-text-color form-text">
                             Password
-                            <ins className="field-info"> minimum 8 characters</ins>
+                            <ins className="field-info">
+                                {" "}
+                                minimum 8 characters
+                            </ins>
                         </label>
                         <input
                             className="signin-input form-text-color"
@@ -135,7 +140,9 @@ const Register = ({ history }) => {
                             onChange={confPwChange}
                         />
 
-                        <div className="error-msg center"><p>{message}</p></div>
+                        <div className="error-msg center">
+                            <p>{message}</p>
+                        </div>
 
                         <div className="signin-button center">
                             <a
