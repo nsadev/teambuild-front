@@ -1,5 +1,4 @@
 .form-container {
-    margin-bottom: 60px;
     width: 100%;
 }
 
@@ -43,7 +42,6 @@
 .form-techstack {
     height: 400px;
     background-color: #f2f5fa;
-    padding-bottom: 100px;
     width: 100vw;
 }
 
@@ -81,4 +79,21 @@
     margin-bottom: 25px;
     margin-top: 40px;
     outline: none;
+}
+
+.form-input-number {
+    margin-left: 20px;
+    display: inline-block;
+    width: 100px;
+}
+
+.createProjectBar {
+    display: flex;
+    position: sticky;
+    position: -webkit-sticky;
+    border-top: 1px solid rgb(102, 102, 102, 0.2);
+    height: 75px;
+    background-color: white;
+    align-items: center;
+    bottom: 0;
 }

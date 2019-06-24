@@ -9,7 +9,7 @@ import reactLogo from "../../../static/react-logo.svg"
 
 const NewProject = () => {
     return (
-        <Fragment>
+        <div>
             <div className="inner-container">
                 <h2 className="page__header">New Project</h2>
                 <form className="form-container">
@@ -112,7 +112,31 @@ const NewProject = () => {
                     </div>
                 </div>
             </form>
-        </Fragment>
+            <div className="inner-container">
+                <form className="form-container">
+                    <h2 className="page__header--second">Members</h2>
+                    <div className="form-element">
+                        <label
+                            htmlFor="project-memberAmount"
+                            className="form-label black"
+                        >
+                            Amount of members
+                        </label>
+                        <input
+                            type="number"
+                            id="project-memberAmount"
+                            name="project-memberAmount"
+                            className="form-input form-input-number"
+                        ></input>
+                    </div>
+                </form>
+            </div>
+            <div className="createProjectBar">
+                <button className="button__without__styling cta-button-form">
+                    Create Project
+                </button>
+            </div>
+        </div>
     )
 }
 
