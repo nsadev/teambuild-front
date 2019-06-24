@@ -1,10 +1,11 @@
 import React, { useEffect } from "react"
 import { BrowserRouter, Switch, Route } from "react-router-dom"
-import Home from "./Pages/Home"
+import Home from "./Pages/Home/Home"
 import SignIn from "./Pages/SignIn/SignIn"
-import Profile from "./Pages/Profile/Profile"
+import Dashboard from "./Pages/Dashboard/Dashboard"
 import Register from "./Pages/Register/Register"
 import Apply from "./Pages/Apply/Apply"
+import ViewProjects from "./Pages/ViewProjects/ViewProjects"
 import auth from "../utils/Auth"
 import { PrivateRoute } from "../PrivateRoute"
 import "./App.css"
@@ -16,7 +17,7 @@ const App = ({ hideLoader }) => {
         return (
             <BrowserRouter>
                 <Switch>
-                    <Route exact path="/" component={Profile} />
+                    <Route exact path="/" component={Dashboard} />
                     <PrivateRoute path="/register" component={Register} />
                 </Switch>
             </BrowserRouter>
@@ -28,6 +29,7 @@ const App = ({ hideLoader }) => {
                     <Route path="/" exact component={Home} />
                     <Route path="/signin" exact component={SignIn} />
                     <Route path="/apply" exact component={Apply} />
+                    <Route exact path="/projects" component={ViewProjects} />
                 </Switch>
             </BrowserRouter>
         )

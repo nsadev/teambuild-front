@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import auth from "../../../../../utils/Auth"
-import "./ProfilePicture.css"
+import "./DashboardPicture.css"
 
 /* Props list:
 
@@ -11,7 +11,7 @@ userLogout => link to the user logout action/page
 userSignedIn => User logged in state. Module only shown on 1, is set to 0 on logout
 */
 
-const ProfilePicture = ({ userImg, userSettings, userLogout }) => {
+const DashboardPicture = ({ userImg, userSettings, userLogout }) => {
     const [hover, setHover] = useState(0)
     const [SignedIn, setSignedIn] = useState(auth.isAuthenticated())
 
@@ -60,4 +60,4 @@ const ProfilePicture = ({ userImg, userSettings, userLogout }) => {
     )
 }
 
-export default ProfilePicture
+export default DashboardPicture
