@@ -1,7 +1,7 @@
 import React from "react"
 import "./MembersForm.css"
 
-const MembersForm = () => {
+const MembersForm = ({ handleChange }) => {
     return (
         <div className="inner-container">
             <form className="form-container">
@@ -16,8 +16,9 @@ const MembersForm = () => {
                     <input
                         type="number"
                         id="project-memberAmount"
-                        name="project-memberAmount"
+                        name="projectMemberAmount"
                         className="form-input form-input-number"
+                        onChange={handleChange}
                     ></input>
                 </div>
             </form>

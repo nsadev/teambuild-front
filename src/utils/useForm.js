@@ -3,11 +3,6 @@ import { useState } from "react"
 const useForm = () => {
     const [values, setValues] = useState({})
 
-    // const handleSubmit = event => {
-    //     if (event) event.preventDefault()
-    //     callback()
-    // }
-
     const handleChange = event => {
         event.persist()
         setValues(values => ({
@@ -18,7 +13,6 @@ const useForm = () => {
 
     return {
         handleChange,
-        // handleSubmit,
         values,
     }
 }

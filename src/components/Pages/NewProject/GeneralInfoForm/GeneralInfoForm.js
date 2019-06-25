@@ -1,16 +1,7 @@
-import React, { useState } from "react"
-import useForm from "../../../../utils/useForm"
+import React from "react"
 import "./GeneralInfoForm.css"
 
-const GeneralInfoForm = () => {
-    // const [projectName, setProjectName] = useState(undefined)
-    // const [projectImageUrl, setProjectImageUrl] = useState(undefined)
-    // const [githubLink, setGithubLink] = useState(undefined)
-    // const [projectDescription, setProjectDescription] = useState(undefined)
-
-    const { values, handleChange } = useForm()
-    console.log(values)
-
+const GeneralInfoForm = ({ handleChange }) => {
     return (
         <div className="inner-container">
             <h2 className="page__header">New Project</h2>
