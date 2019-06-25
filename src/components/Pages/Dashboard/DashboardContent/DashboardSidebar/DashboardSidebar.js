@@ -40,16 +40,16 @@ const DashboardSidebar = ({
                                                           index
                                                       ) => {
                                                           return (
-                                                              <span
+                                                              <button
                                                                   key={
                                                                       secondLevelObject
                                                                   }
-                                                                  className="dashboard__item__lower-menu__item"
+                                                                  className="dashboard__item__lower-menu__item button__without__styling"
                                                               >
                                                                   {
                                                                       secondLevelObject
                                                                   }
-                                                              </span>
+                                                              </button>
                                                           )
                                                       }
                                                   )
