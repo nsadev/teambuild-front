@@ -132,7 +132,7 @@ const NewProject = () => {
                 </form>
             </div>
             <div className="createProjectBar">
-                <button className="button__without__styling cta-button-form">
+                <button className="button__without__styling cta-button-form createProjectBar-container">
                     Create Project
                 </button>
             </div>
