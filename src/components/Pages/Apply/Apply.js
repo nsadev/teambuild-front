@@ -1,10 +1,9 @@
-import React, { useState } from "react"
+import React, { useState, Fragment } from "react"
 import "../../../main.css"
 import "./Apply.css"
 import "../SignIn/SignIn.css"
 
-
-import Background from "../../Background/Background"
+import EmptyNavbar from "../../EmptyNavbar/EmptyNavbar"
 
 const Apply = props => {
     const [email, setEmail] = useState(null)
@@ -18,7 +17,6 @@ const Apply = props => {
     
     
 
-
     function onEmailChange(e) {
         setEmail(e.target.value)
     }
@@ -31,7 +29,7 @@ const Apply = props => {
         setGithubName(e.target.value)
     }
 
-    function roleSelection(e){
+    function roleSelection(e) {
         setRole(e.target.value)
     }
 
@@ -49,8 +47,7 @@ const Apply = props => {
     );
 
     function onSubmit() {
-
-        if(name && email && githubName && role && stack && joinReason ){
+        if (name && email && githubName && role && stack && joinReason) {
             try {
                 fetch("/apply", {
                     method: "post",
@@ -61,8 +58,9 @@ const Apply = props => {
                         githubName: githubName,
                         role: role,
                         stack: stack,
-                        joinReason: joinReason
+                        joinReason: joinReason,
                     }),
+<<<<<<< HEAD
                 }).then(response => response.json())
                     setSuccess(true)
                     .then(data => {
@@ -175,6 +173,126 @@ const Apply = props => {
     </div>
 )
     }
+=======
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        setMessage(data.message)
+                    })
+            } catch (e) {
+                setMessage(e)
+            }
+        } else {
+            setMessage("Every fields are mandatory")
+        }
+    }
+
+    return (
+        <Fragment>
+            <EmptyNavbar />
+            <div className="blocks-background">
+                <div className="apply-container">
+                    <div className="apply-window">
+                        <h1 className="center form-text-color">Application</h1>
+
+                        <form className="apply-form">
+                            <label className="form-text-color form-text">
+                                Name
+                            </label>
+                            <input
+                                className="signin-input apply-input form-text-color"
+                                type="name"
+                                name="name"
+                                onChange={onNameChange}
+                            />
+
+                            <label className="form-text form-text-color">
+                                E-mail
+                            </label>
+                            <input
+                                className="signin-input apply-input form-text-color"
+                                type="email"
+                                name="email"
+                                onChange={onEmailChange}
+                            />
+                            <label className="form-text form-text-color">
+                                GitHub Account
+                            </label>
+                            <input
+                                className="signin-input apply-input form-text-color"
+                                type="text"
+                                name="github-account-name"
+                                onChange={onGithubNameChange}
+                            />
+
+                            <label className="form-text form-text-color">
+                                What developer role do you prefer?
+                            </label>
+                            <div className="radio-buttons form-text-color">
+                                <input
+                                    type="radio"
+                                    value="Front-End/Design"
+                                    name="stack"
+                                    onChange={roleSelection}
+                                />
+                                Front-End/Design
+                                <input
+                                    type="radio"
+                                    value="Back-End"
+                                    name="stack"
+                                    onChange={roleSelection}
+                                />
+                                Back-End
+                                <input
+                                    type="radio"
+                                    value="Full-Stack"
+                                    name="stack"
+                                    onChange={roleSelection}
+                                />
+                                Full-Stack
+                            </div>
+
+                            <label className="form-text form-text-color">
+                                Technologies you are familiar with
+                            </label>
+                            <textarea
+                                className="signin-input apply-input text-area form-text-color"
+                                type="text"
+                                name="techStack"
+                                placeholder="Javascript, Node.js etc."
+                                onChange={onStackChange}
+                            />
+
+                            <label className="form-text form-text-color">
+                                Why do you want to join TeamBuild?
+                            </label>
+                            <textarea
+                                className="signin-input apply-input signin-input text-area form-text-color"
+                                type="text"
+                                name="joinReason"
+                                onChange={onJoinChange}
+                            />
+
+                            <div className="error-msg center">
+                                <p>{message}</p>
+                            </div>
+
+                            <div className="apply-button center">
+                                <a
+                                    className="cta-button-form"
+                                    type="submit"
+                                    onClick={onSubmit}
+                                >
+                                    Submit
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </Fragment>
+    )
+>>>>>>> 66b872ea1805562973adb75acdd4ef68c83a7678
 }
 
 

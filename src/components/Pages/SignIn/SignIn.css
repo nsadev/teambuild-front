@@ -1,22 +1,20 @@
-
-
 .signin-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 120px;
 }
-
 
 .signin-window {
     position: relative;
     grid-column: 2 / 2;
     margin: 100px 0 0 0;
-    width: 500px;
+    width: 480px;
     height: 560px;
     background-color: white;
 
-    -webkit-box-shadow: 0px 12px 32px rgba(0,0,0,0.1);
-    -moz-box-shadow: 0px 12px 32px rgba(0,0,0,0.1);
-    box-shadow: 0px 12px 32px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
 
@@ -33,10 +31,16 @@
     height: 45px;
     border: 1px solid #dadada;
     box-sizing: border-box;
-    border-radius: 8px;
+    border-radius: 10px;
     margin-bottom: 50px;
-    font-size: 22px;
-    padding-left: 10px;
+    font-size: 18px;
+    padding-left: 16px;
+    outline: none;
+}
+
+.signin-input:focus {
+    border: 1px solid #4eb9f4;
+    transition: border 0.2s linear;
 }
 
 .signin-button {
@@ -45,12 +49,12 @@
 
 .form-text {
     font-size: 18px;
+    color: #666;
 }
 
 .form-text-color {
-    color: #666666;
+    color: #333;
 }
-
 
 .signin-footer > a {
     color: #4eb9f4;

@@ -1,83 +1,85 @@
 .jumbo-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  height: 600px;
-  background: linear-gradient(180deg, #ffffff 0%, #f2f7ff 100%);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 600px;
+    background: linear-gradient(180deg, #ffffff 0%, #f2f7ff 100%);
+}
+
+.rectangle-container {
+    position: relative;
 }
 
 .jumbotron {
-  position: relative;
-  grid-column: 2 / 2;
-  grid-row: 2;
-  width: 700px;
-  margin-left: -100px;
+    position: relative;
+    grid-column: 2 / 2;
+    grid-row: 2;
+    width: 700px;
+    margin-left: -100px;
 }
 
 .jumbo {
-  letter-spacing: 0.02em;
-  color: #333333;
+    letter-spacing: 0.02em;
+    color: #333333;
 }
 
 .jumbo-title {
-  position: absolute;
-  font-size: 32px;
-  font-weight: bold;
-  line-height: 44px;
+    position: absolute;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 44px;
 }
 
 .jumbo-text {
-  margin: 60px 0 50px 0;
-  padding-left: 5px;
-  font-size: 20px;
-  line-height: 164.3%;
+    margin: 60px 0 50px 0;
+    padding-left: 5px;
+    font-size: 20px;
+    line-height: 164.3%;
 }
 
 .jumbo-title > ins {
-  text-decoration: none;
-  color: #a291ef;
+    text-decoration: none;
+    color: #a291ef;
 }
 
 @media (max-width: 1120px) {
-  .jumbo-title {
-    position: relative
-  }
+    .jumbo-title {
+        position: relative;
+    }
 
-  .jumbo-text {
-    margin: 20px 0 50px 0;
-  }
+    .jumbo-text {
+        margin: 20px 0 50px 0;
+    }
 }
 
-
 @media (max-width: 1024px) {
-  .jumbo-container {
-    display: flex;
-    height: 400px;
-    padding-top: 50px;
-  }
-  .jumbotron {
-    padding: 14px;
-    margin: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
+    .jumbo-container {
+        display: flex;
+        height: 400px;
+        padding-top: 50px;
+    }
+    .jumbotron {
+        padding: 14px;
+        margin: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
 
-  .jumbo-title {
-    font-size: 24px;
-  }
+    .jumbo-title {
+        font-size: 24px;
+    }
 
-  .jumbo-text {
-    font-size: 16px;
-  }
+    .jumbo-text {
+        font-size: 16px;
+    }
 }
 
-
 @media (max-width: 1024px) {
-  .rectangle-1,
-  .rectangle-2,
-  .rectangle-small,
-  .rectangle-3,
-  .rectangle-4 {
-    display: none;
-  }
+    .rectangle-1,
+    .rectangle-2,
+    .rectangle-small,
+    .rectangle-3,
+    .rectangle-4 {
+        display: none;
+    }
 }
