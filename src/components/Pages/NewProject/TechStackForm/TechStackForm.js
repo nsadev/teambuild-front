@@ -1,51 +1,51 @@
-import React from "react"
-import nodeLogo from "../../../../static/node-logo.svg"
-import pythonLogo from "../../../../static/python-logo.svg"
-import graphqlLogo from "../../../../static/graphql-logo.svg"
-import angularLogo from "../../../../static/angular-logo.svg"
-import vueLogo from "../../../../static/vue-logo.svg"
-import reactLogo from "../../../../static/react-logo.svg"
+import React, { useState } from "react"
+import SearchBar from "./SearchBar/SearchBar"
 import "./TechStackForm.css"
 
 const TechStackForm = () => {
+    const [frontTechStack, setFrontTechStack] = useState([])
+    const [backTechStack, setBackTechStack] = useState([])
+
+    const handleAddTechStack = suggestion => {
+        if (suggestion.frontOrBack === "frontend") {
+            setFrontTechStack(frontTechStack => [...frontTechStack, suggestion])
+        } else {
+            setBackTechStack(backTechStack => [...backTechStack, suggestion])
+        }
+    }
+    console.log(frontTechStack)
+    console.log(backTechStack)
+
     return (
         <form className="form-container form-background">
             <div className="inner-container">
                 <div className="form-techstack">
                     <h2 className="page__header--second">Tech Stack</h2>
                     <div className="page__search">
-                        <input
-                            className="form-techstack-search"
-                            type="text"
-                            placeholder="Search"
-                        ></input>
+                        <SearchBar handleAddTechStack={handleAddTechStack} />
                         <div className="form-techstack-summary">
                             <span className="form-techstack-summary-list">
                                 Front:
                             </span>
-                            <span className="form-techstack-summary-list-image">
-                                <img src={reactLogo}></img>
-                            </span>
-                            <span className="form-techstack-summary-list-image">
-                                <img src={angularLogo}></img>
-                            </span>
-                            <span className="form-techstack-summary-list-image">
-                                <img src={vueLogo}></img>
-                            </span>
+                            {frontTechStack.map(tech => {
+                                return (
+                                    <span className="form-techstack-summary-list-image">
+                                        <img src={tech.icon}></img>
+                                    </span>
+                                )
+                            })}
                         </div>
                         <div className="form-techstack-summary">
                             <span className="form-techstack-summary-list">
                                 Back:
                             </span>
-                            <span className="form-techstack-summary-list-image">
-                                <img src={nodeLogo}></img>
-                            </span>
-                            <span className="form-techstack-summary-list-image">
-                                <img src={pythonLogo}></img>
-                            </span>
-                            <span className="form-techstack-summary-list-image">
-                                <img src={graphqlLogo}></img>
-                            </span>
+                            {backTechStack.map(tech => {
+                                return (
+                                    <span className="form-techstack-summary-list-image">
+                                        <img src={tech.icon}></img>
+                                    </span>
+                                )
+                            })}
                         </div>
                     </div>
                 </div>

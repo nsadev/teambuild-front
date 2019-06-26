@@ -1,10 +1,11 @@
 .form-techstack {
-    height: 400px;
+    height: 100%;
     background-color: #f2f5fa;
     width: 100vw;
 }
 
 .form-techstack-summary {
+    height: 40px;
     display: flex;
     align-items: center;
     padding-top: 50px;
