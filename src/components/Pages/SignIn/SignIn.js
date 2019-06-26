@@ -37,9 +37,7 @@ const SignIn = () => {
                             // Set key-value pair in LocalStorage for Loader Icon.
                             localStorage.setItem("teambuild", "true")
                             // Set user as authenticated and redirect user to app
-                            auth.login(() =>
-                                window.location.assign("http://localhost:3000/")
-                            )
+                            auth.login(() => window.location.assign("/"))
                         } else {
                             setMessage(user.message)
                         }
