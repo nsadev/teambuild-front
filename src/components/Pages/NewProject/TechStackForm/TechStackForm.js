@@ -1,32 +1,13 @@
-import React, { useState } from "react"
+import React from "react"
 import SearchBar from "./SearchBar/SearchBar"
 import "./TechStackForm.css"
 
-const TechStackForm = () => {
-    const [frontTechStack, setFrontTechStack] = useState([])
-    const [backTechStack, setBackTechStack] = useState([])
-
-    const handleAddTechStack = suggestion => {
-        if (suggestion.frontOrBack === "frontend") {
-            setFrontTechStack(frontTechStack => [...frontTechStack, suggestion])
-        } else {
-            setBackTechStack(backTechStack => [...backTechStack, suggestion])
-        }
-    }
-    console.log(frontTechStack)
-    console.log(backTechStack)
-
-    const handleDeleteTechStack = (id, frontOrBack) => {
-        if (frontOrBack === "frontend") {
-            return setFrontTechStack(frontTechStack =>
-                frontTechStack.filter(tech => tech.id !== id)
-            )
-        }
-        setBackTechStack(backTechStack =>
-            backTechStack.filter(tech => tech.id !== id)
-        )
-    }
-
+const TechStackForm = ({
+    handleAddTechStack,
+    handleDeleteTechStack,
+    frontTechStack,
+    backTechStack,
+}) => {
     return (
         <form className="form-container form-background">
             <div className="inner-container">

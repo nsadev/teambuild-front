@@ -62,7 +62,7 @@ const Dashboard = () => {
                     sideNavStyle={sideNavStyle}
                     sideNavTextStyle={sideNavTextStyle}
                 >
-                    <NewProject />
+                    <NewProject user={user} />
                 </DashboardContent>
                 <DashboardFooter />
             </div>

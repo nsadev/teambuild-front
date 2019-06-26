@@ -13,7 +13,7 @@ const GeneralInfoForm = ({ handleChange }) => {
                     <input
                         type="text"
                         id="projectName"
-                        name="project-name"
+                        name="projectName"
                         className="form-input form-input-width"
                         onChange={handleChange}
                     ></input>
