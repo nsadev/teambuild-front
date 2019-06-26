@@ -119,7 +119,9 @@ class SearchBar extends React.Component {
         { suggestion, suggestionValue, suggestionIndex, sectionIndex, method }
     ) => {
         this.props.handleAddTechStack(suggestion)
-        // console.log("real value: " + suggestionValue)
+        this.setState({
+            value: "",
+        })
     }
 
     onSuggestionsFetchRequested = ({ value }) => {
