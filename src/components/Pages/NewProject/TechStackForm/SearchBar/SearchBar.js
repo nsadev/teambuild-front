@@ -12,36 +12,42 @@ import "./SearchBar.css"
 
 const techStack = [
     {
+        id: 1,
         tech: "React",
         frontOrBack: "frontend",
         picture: "react",
         icon: reactLogo,
     },
     {
+        id: 2,
         tech: "Angular",
         frontOrBack: "frontend",
         picture: "angular",
         icon: angularLogo,
     },
     {
+        id: 3,
         tech: "Vue",
         frontOrBack: "frontend",
         picture: "vue",
         icon: vueLogo,
     },
     {
+        id: 4,
         tech: "Node",
         frontOrBack: "backend",
         picture: "node",
         icon: nodeLogo,
     },
     {
+        id: 5,
         tech: "Python",
         frontOrBack: "backend",
         picture: "python",
         icon: pythonLogo,
     },
     {
+        id: 6,
         tech: "GraphQL",
         frontOrBack: "backend",
         picture: "graphql",

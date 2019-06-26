@@ -11,9 +11,12 @@
     padding-top: 25px;
 }
 
+.form-input-width {
+    width: 400px;
+}
+
 .form-input {
     display: block;
-    width: 400px;
     height: 45px;
     border: 1px solid #dadada;
     box-sizing: border-box;

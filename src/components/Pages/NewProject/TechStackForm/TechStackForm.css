@@ -15,7 +15,7 @@
     padding-right: 35px;
 }
 
-.form-techstack-summary-list-image {
+.form-techstack-summary-list-item {
     padding-right: 30px;
     width: 40px;
 }
@@ -33,4 +33,28 @@
     margin-bottom: 25px;
     margin-top: 40px;
     outline: none;
+}
+
+.hiddentest {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 50%;
+    color: #ffffff;
+    background: #4eb9f4;
+    outline: none;
+    cursor: pointer;
+}
+
+.form-techstack-summary-list-item-image-wrapper {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.form-techstack-summary-list-item-image-wrapper:hover > button {
+    visibility: visible;
 }

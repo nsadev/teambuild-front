@@ -16,6 +16,17 @@ const TechStackForm = () => {
     console.log(frontTechStack)
     console.log(backTechStack)
 
+    const handleDeleteTechStack = (id, frontOrBack) => {
+        if (frontOrBack === "frontend") {
+            return setFrontTechStack(frontTechStack =>
+                frontTechStack.filter(tech => tech.id !== id)
+            )
+        }
+        setBackTechStack(backTechStack =>
+            backTechStack.filter(tech => tech.id !== id)
+        )
+    }
+
     return (
         <form className="form-container form-background">
             <div className="inner-container">
@@ -29,8 +40,25 @@ const TechStackForm = () => {
                             </span>
                             {frontTechStack.map(tech => {
                                 return (
-                                    <span className="form-techstack-summary-list-image">
-                                        <img src={tech.icon}></img>
+                                    <span className="form-techstack-summary-list-item">
+                                        <div className="form-techstack-summary-list-item-image-wrapper">
+                                            <img
+                                                className="form-techstack-summary-list-item-image"
+                                                src={tech.icon}
+                                            ></img>
+                                            <button
+                                                onClick={e => {
+                                                    e.preventDefault()
+                                                    handleDeleteTechStack(
+                                                        tech.id,
+                                                        tech.frontOrBack
+                                                    )
+                                                }}
+                                                className="hiddentest"
+                                            >
+                                                x
+                                            </button>
+                                        </div>
                                     </span>
                                 )
                             })}
@@ -41,8 +69,25 @@ const TechStackForm = () => {
                             </span>
                             {backTechStack.map(tech => {
                                 return (
-                                    <span className="form-techstack-summary-list-image">
-                                        <img src={tech.icon}></img>
+                                    <span className="form-techstack-summary-list-item">
+                                        <div className="form-techstack-summary-list-item-image-wrapper">
+                                            <img
+                                                className="form-techstack-summary-list-item-image"
+                                                src={tech.icon}
+                                            ></img>
+                                            <button
+                                                onClick={e => {
+                                                    e.preventDefault()
+                                                    handleDeleteTechStack(
+                                                        tech.id,
+                                                        tech.frontOrBack
+                                                    )
+                                                }}
+                                                className="hiddentest"
+                                            >
+                                                x
+                                            </button>
+                                        </div>
                                     </span>
                                 )
                             })}

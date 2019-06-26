@@ -14,7 +14,7 @@ const GeneralInfoForm = ({ handleChange }) => {
                         type="text"
                         id="projectName"
                         name="project-name"
-                        className="form-input"
+                        className="form-input form-input-width"
                         onChange={handleChange}
                     ></input>
                 </div>
@@ -29,7 +29,7 @@ const GeneralInfoForm = ({ handleChange }) => {
                         type="text"
                         id="project-imageUrl"
                         name="projectImageUrl"
-                        className="form-input"
+                        className="form-input form-input-width"
                         onChange={handleChange}
                     ></input>
                 </div>
@@ -41,7 +41,7 @@ const GeneralInfoForm = ({ handleChange }) => {
                         type="text"
                         id="github-link"
                         name="githubLink"
-                        className="form-input"
+                        className="form-input form-input-width"
                         onChange={handleChange}
                     ></input>
                 </div>
@@ -55,7 +55,7 @@ const GeneralInfoForm = ({ handleChange }) => {
                     <textarea
                         id="project-description"
                         name="projectDescription"
-                        className="form-input form-textarea"
+                        className="form-textarea"
                         onChange={handleChange}
                     ></textarea>
                 </div>
