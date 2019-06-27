@@ -3,11 +3,10 @@
 }
 
 .userNav {
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
     text-align: left;
     letter-spacing: 0.01em;
-    box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.1);
     position: relative;
     cursor: pointer;
     border-radius: 50%;
@@ -54,5 +53,5 @@
 }
 
 .subMenu a:hover {
-    color: rgb(86,194,253);
+    color: rgb(86, 194, 253);
 }
