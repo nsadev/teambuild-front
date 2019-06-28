@@ -112,3 +112,9 @@
     margin: 0;
   }
 }
+
+@media (max-width: 769px) {
+  .navbar__m-icon {
+    margin-right: 20px;
+  }
+}
