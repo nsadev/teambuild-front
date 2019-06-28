@@ -1,0 +1,13 @@
+.form-textarea {
+    height: 175px;
+    width: 560px;
+    padding-top: 12px;
+    display: block;
+
+    border: 1px solid #dadada;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 18px;
+    padding-left: 16px;
+    outline: none;
+}
