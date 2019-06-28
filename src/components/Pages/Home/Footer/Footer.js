@@ -30,13 +30,16 @@ const Footer = () => (
                     All projects
                 </a>
             </div>
-            <div className="cta-white-outline">
+            <div className="footer__copyright">
+                <p>©Copyright {(new Date().getFullYear())}. All rights reserved.</p>
+            </div>
+            {/* <div className="cta-white-outline">
                 <Link className="link" to="/apply">
                     <a href="#" className="link white">
                         Get Started
                     </a>
                 </Link>
-            </div>
+            </div> */}
         </div>
     </div>
 )
