@@ -1,7 +1,7 @@
 import React from "react"
 import "./DashboardFooter.css"
 
-const ProfileFooter = () => {
+const DashboardFooter = () => {
     const year = new Date().getFullYear()
 
     return (
@@ -12,4 +12,4 @@ const ProfileFooter = () => {
     )
 }
 
-export default ProfileFooter
+export default DashboardFooter
