@@ -37,10 +37,10 @@ const Motivations = () => {
                     <div className="item-box item-box-left">
                         <img className="illustration" src={find_team} />
                         <div className="text">
-                            <h2>Apply and find your team</h2>
+                            <h3>Apply and find your team</h3>
                             <p>
-                                Etiam imperdiet imperdiet orci. Donec id justo.
-                                Nunc nulla. Suspendisse faucibus.
+                                Step one - a piece of cake - send your application 
+                                to join and/or find your new team.
                             </p>
                         </div>
                     </div>
@@ -48,10 +48,10 @@ const Motivations = () => {
                     <div className="item-box item-box-mid">
                         <img className="illustration" src={build} />
                         <div className="text">
-                            <h2>Build your awesome project</h2>
+                            <h3>Build your awesome project</h3>
                             <p>
-                                Etiam imperdiet imperdiet orci. Donec id justo.
-                                Nunc nulla. Suspendisse faucibus.
+                                Together with your team you'll build new projects that was
+                                out of reach before.
                             </p>
                         </div>
                     </div>
@@ -59,15 +59,12 @@ const Motivations = () => {
                     <div className="item-box item-box-right">
                         <img className="illustration" src={fast_working} />
                         <div className="text">
-                            <h2>Fast forward your career</h2>
+                            <h3>Fast forward your career</h3>
                             <p>
-                                Etiam imperdiet imperdiet orci. Donec id justo.
-                                Nunc nulla. Suspendisse faucibus.
+                                All your new experience and knowledge give you
+                                an upper edge in your career.
                             </p>
                         </div>
-                    </div>
-                    <div className="motiv-button">
-                        <GetStartedButton />
                     </div>
                 </div>
             </div>
