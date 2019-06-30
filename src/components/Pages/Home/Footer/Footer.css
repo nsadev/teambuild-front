@@ -47,6 +47,13 @@
   font-size: 20px;
 }
 
+.footer__copyright {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  margin-top: 60px;
+  margin-left: 150px;
+}
 
 @media (max-width: 1440px) {
   .footer {
@@ -65,5 +72,12 @@
   .footer .container .cta-white-outline {
     align-self: center;
     margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 769px) {
+  .footer .container {
+    margin-bottom: 60px;
+    padding-top: 20px;
   }
 }

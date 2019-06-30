@@ -1,0 +1,14 @@
+.stickyBar {
+    display: flex;
+    position: sticky;
+    position: -webkit-sticky;
+    border-top: 1px solid rgb(102, 102, 102, 0.2);
+    height: 75px;
+    background-color: white;
+    align-items: center;
+    bottom: 0;
+}
+
+.stickyBar-container {
+    margin-left: 100px;
+}

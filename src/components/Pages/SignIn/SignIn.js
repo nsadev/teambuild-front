@@ -1,110 +1,111 @@
-import React, { useState } from "react";
-import { Link, Redirect, withRouter } from "react-router-dom";
+import React, { useState, Fragment } from "react"
+import { Link } from "react-router-dom"
 
-import Logo from "../../Logo/Logo";
-import auth from "../../../utils/Auth";
+import EmptyNavbar from "../../EmptyNavbar/EmptyNavbar"
+import auth from "../../../utils/Auth"
 
-import "./SignIn.css";
-import "../../../main.css";
+import "./SignIn.css"
 
-const SignIn = ({ getUser, history }) => {
-  const [email, setEmail] = useState(undefined);
-  const [password, setPassword] = useState(undefined);
+const SignIn = () => {
+    const [email, setEmail] = useState(null)
+    const [password, setPassword] = useState(null)
+    const [message, setMessage] = useState(null)
 
-  function handleEmailChange(e) {
-    setEmail(e.target.value);
-  }
+    function handleEmailChange(e) {
+        setEmail(e.target.value)
+    }
 
-  function handlePwChange(e) {
-    setPassword(e.target.value);
-  }
+    function handlePwChange(e) {
+        setPassword(e.target.value)
+    }
 
-  const submitSignin = () => {
-    //Add checking conditions
-
-    fetch("/user/login", {
-      method: "post",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        email: email,
-        password: password
-      })
-    })
-      .then(resp => resp.json())
-      .then(user => {
-        if (user) {
-          // User object updating in App.js
-          getUser(user);
-          // Redirect user to profile page
-          auth.login(() => history.push("/profile"));
+    const submitSignin = () => {
+        if (email && password) {
+            try {
+                fetch("/user/login", {
+                    method: "post",
+                    credentials: "same-origin",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        email: email,
+                        password: password,
+                    }),
+                })
+                    .then(resp => resp.json())
+                    .then(user => {
+                        if (user.message === "Login successful") {
+                            // Set key-value pair in LocalStorage for Loader Icon.
+                            localStorage.setItem("teambuild", "true")
+                            // Set user as authenticated and redirect user to app
+                            auth.login(() => window.location.assign("/"))
+                        } else {
+                            setMessage(user.message)
+                        }
+                    })
+            } catch (e) {
+                setMessage(
+                    "Server is not available, check your connection or try again later"
+                )
+            }
+        } else {
+            setMessage("Please provide your E-mail and Password")
         }
-      });
-  };
+    }
 
-  // if (authenticated === true) {
-  //   return <Redirect to="/profile" />;
-  // }
+    return (
+        <Fragment>
+            <EmptyNavbar />
+            <div className="blocks-background">
+                <div className="signin-container">
+                    <div className="signin-window">
+                        <h1 className="center form-text-color">Sign In</h1>
 
-  return (
-    <div>
-      <div>
-        <div className="rectangle rectangle-1" />
-        <div className="rectangle rectangle-2" />
-        <div className="rectangle-small" />
-        <div className="rectangle rectangle-3" />
-        <div className="rectangle rectangle-4" />
-      </div>
+                        <form className="signin-form">
+                            <label className="form-text-color form-text">
+                                E-mail
+                            </label>
+                            <input
+                                className="signin-input form-text-color"
+                                type="email"
+                                name="email"
+                                onChange={handleEmailChange}
+                            />
 
-      <div className="navbar">
-        <div className="container">
-          <div className="navbar__logo">
-            <Logo />
-          </div>
-        </div>
-      </div>
+                            <label className="form-text form-text-color">
+                                Password
+                            </label>
+                            <input
+                                className="signin-input form-text-color"
+                                type="password"
+                                name="password"
+                                onChange={handlePwChange}
+                            />
 
-      <div className="template-container signin-container">
-        <div className="signin-window">
-          <h1 className="center form-text-color">Sign In</h1>
+                            <div className="error-msg center">
+                                <p>{message}</p>
+                            </div>
 
-          <form className="signin-form">
-            <label className="form-text-color form-text">E-mail</label>
-            <input
-              className="signin-input form-text-color"
-              type="email"
-              name="email"
-              onChange={handleEmailChange}
-            />
+                            <div className="signin-button center">
+                                <a
+                                    className="cta-button-form"
+                                    onClick={submitSignin}
+                                >
+                                    Sign In
+                                </a>
+                            </div>
+                        </form>
 
-            <label className="form-text form-text-color">Password</label>
-            <input
-              className="signin-input form-text-color"
-              type="password"
-              name="password"
-              onChange={handlePwChange}
-            />
-
-            <div className="signin-button center">
-              <a className="cta-button-form" onClick={submitSignin}>
-                Sign In
-              </a>
+                        <div className="center form-text-color signin-footer">
+                            Don't have an account?
+                            <Link className="signin-footer" to="/apply">
+                                <a href="#"> Apply</a>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </form>
+        </Fragment>
+    )
+}
 
-          <div className="center form-text-color signin-footer">
-            Don't have an account?{" "}
-            <Link className="signin-footer" to="/apply">
-              <a href="#">Apply</a>
-            </Link>
-            {/*Delete when auth logic done*/}
-            <br />
-            <Link to="/register">Register</Link>
-            {/*--------------------------------------*/}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default withRouter(SignIn);
+export default SignIn

@@ -1,0 +1,19 @@
+.dashboard-navbar {
+    background-color: white;
+    margin-right: 15px;
+}
+
+.dashboard__navbar__menu {
+    width: 51px;
+    align-self: center;
+}
+
+/* .dashboard__navbar__menu:focus > .testingthis {
+    display: block;
+} */
+
+.username-tag {
+    margin-left: 25px;
+    font-weight: bold;
+    letter-spacing: 0.07em;
+}
