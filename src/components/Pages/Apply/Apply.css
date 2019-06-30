@@ -43,3 +43,14 @@
 .radio-buttons {
     margin: 20px 0 40px 30px;
 }
+
+@media (max-width: 580px) {
+    .apply-container {
+        grid-template-columns: auto;
+    }
+    .apply-window {
+        background-color: transparent;
+        box-shadow: none;
+        width: 100%;
+    }
+}
