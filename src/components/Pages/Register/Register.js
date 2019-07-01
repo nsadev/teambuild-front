@@ -97,7 +97,7 @@ const Register = ({ history }) => {
                             E-mail
                         </label>
                         <input
-                            className="signin-input form-text-color"
+                            className="signin-input"
                             type="email"
                             name="e-mail"
                             id="email"
@@ -111,7 +111,7 @@ const Register = ({ history }) => {
                                 First name
                             </label>
                             <input
-                                className="signin-input form-text-color"
+                                className="signin-input"
                                 type="text"
                                 name="firstname"
                                 id="firstname"
@@ -124,7 +124,7 @@ const Register = ({ history }) => {
                                 Last name
                             </label>
                             <input
-                                className="signin-input form-text-color"
+                                className="signin-input "
                                 type="text"
                                 name="lastname"
                                 id="lastname"
@@ -132,59 +132,67 @@ const Register = ({ history }) => {
                             />
                         </div>
 
+                        <label className="form-text-color form-text">
+                            GitHub Account
+                        </label>
+                        <input
+                            className="signin-input form-text"
+                            type="text"
+                            name="github"
+                            id="github"
+                            onChange={githubChange}
+                        />
+
+                        <label className="form-text-color form-text">
+                            Role
+                        </label>
+
+                        <select className="signin-input form-text no-bg">
+                            <option value="Designer">Designer</option>
+                            <option value="Front-End">Front-End</option>
+                            <option value="Back-End">Back-End</option>
+                            <option value="Full-Stack">Full-Stack</option>
+                        </select>
+
+                        {/*<input*/}
+                        {/*    className="signin-input form-text-color"*/}
+                        {/*    type="text"*/}
+                        {/*    name="role"*/}
+                        {/*    id="role"*/}
+                        {/*    onChange={roleChange}*/}
+                        {/*/>*/}
+
                         <div className="form-inline">
                             <label className="form-text-color form-text">
-                                GitHub Account
+                                Password
+                                <ins className="field-info">
+                                    {" "}
+                                    min 8 characters
+                                </ins>
                             </label>
                             <input
-                                className="signin-input form-text-color"
-                                type="text"
-                                name="github"
-                                id="github"
-                                onChange={githubChange}
+                                className="signin-input "
+                                type="password"
+                                name="password"
+                                id="password"
+                                onChange={passwordChange}
                             />
                         </div>
 
                         <div className="form-inline" style={{float: "right"}}>
                             <label className="form-text-color form-text">
-                                Role
+                                Confirm password
                             </label>
                             <input
-                                className="signin-input form-text-color"
-                                type="text"
-                                name="role"
-                                id="role"
-                                onChange={roleChange}
+                                className="signin-input"
+                                type="password"
+                                name="confPw"
+                                id="confPw"
+                                onChange={confPwChange}
                             />
                         </div>
 
-                        <label className="form-text-color form-text">
-                            Password
-                            <ins className="field-info">
-                                {" "}
-                                minimum 8 characters
-                            </ins>
-                        </label>
-                        <input
-                            className="signin-input form-text-color"
-                            type="password"
-                            name="password"
-                            id="password"
-                            onChange={passwordChange}
-                        />
-
-                        <label className="form-text-color form-text">
-                            Confirm password
-                        </label>
-                        <input
-                            className="signin-input form-text-color"
-                            type="password"
-                            name="confPw"
-                            id="confPw"
-                            onChange={confPwChange}
-                        />
-
-                        <div className="error-msg center">
+                        <div className="error-msg">
                             <p>{message}</p>
                         </div>
 

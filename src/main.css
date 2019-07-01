@@ -288,4 +288,8 @@ h1 {
     width: 45%;
 }
 
+.no-bg {
+    background-color: rgba(255, 255, 255, 0.0);
+}
+
 
