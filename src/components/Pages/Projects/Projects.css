@@ -1,6 +1,7 @@
 .inner-container {
-    padding-top: 100px;
-    margin-left: 150px;
+    padding-top: 75px;
+    margin-left: 100px;
+    padding-bottom: 75px;
 }
 
 .page__header {
@@ -9,6 +10,7 @@
     font-weight: bold;
     letter-spacing: 0.01em;
     color: #333333;
+    margin-top: 0;
 }
 
 .page__searchbar {

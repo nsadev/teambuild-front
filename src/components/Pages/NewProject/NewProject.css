@@ -1,0 +1,43 @@
+.form-container {
+    width: 100%;
+}
+
+.form-background {
+    background-color: #f2f5fa;
+    width: 100%;
+}
+
+.form-element {
+    padding-top: 25px;
+}
+
+.form-input-width {
+    width: 400px;
+}
+
+.form-input {
+    display: block;
+    height: 45px;
+    border: 1px solid #dadada;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 18px;
+    padding-left: 16px;
+    outline: none;
+}
+
+.form-input:focus {
+    border: 1px solid #4eb9f4;
+    transition: border 0.2s linear;
+}
+
+.form-label {
+    font-size: 18px;
+    color: #666;
+}
+
+.page__header--second {
+    color: #333;
+    font-weight: bold;
+    margin: 0;
+}

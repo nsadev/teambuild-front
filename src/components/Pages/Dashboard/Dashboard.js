@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import DashboardNavbar from "./DashboardNavbar/DashboardNavbar"
 import DashboardFooter from "./DashboardFooter/DashboardFooter"
 import DashboardContent from "./DashboardContent/DashboardContent"
+import NewProject from "../NewProject/NewProject"
 import Projects from "../Projects/Projects"
 import auth from "../../../utils/Auth"
 import "./Dashboard.css"
@@ -61,7 +62,7 @@ const Dashboard = () => {
                     sideNavStyle={sideNavStyle}
                     sideNavTextStyle={sideNavTextStyle}
                 >
-                    <Projects />
+                    <NewProject user={user} />
                 </DashboardContent>
                 <DashboardFooter />
             </div>

@@ -16,6 +16,7 @@ body {
     background-color: #ffffff;
 
     overflow-x: hidden;
+    height: 100%;
 }
 
 code {

@@ -1,6 +1,6 @@
 .motiv-container {
   margin: 0 auto;
-  height: 700px;
+  height: 600px;
   justify-content: center;
   background-color: #ffffff;
   display: grid;
@@ -45,14 +45,6 @@
   padding: 0 45px 0 45px;
 }
 
-.motiv-button {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  text-align: center;
-  grid-column: 2 / 2;
-  grid-row: 4;
-}
-
 .sv {
   margin-bottom: -20px;
   background-color: #f2f7ff;
@@ -65,6 +57,8 @@
     display: flex;
     flex-direction: column;
     height: auto;
+    padding-top: 4%;
+    padding-bottom: 4%;
   }
 
   .item-box {
@@ -75,12 +69,25 @@
   }
 
   .text > p {
-    padding: 0;
+    padding: 0 30px 0 30px;
   }
 }
 
-@media (max-width: 468px) {
-  .motiv-main .motiv-button {
-    margin: 14px;
+@media(max-width: 769px) {
+  .motiv-container {
+    padding-top: 6%;
+  }
+
+  .item-box {
+    width: 100%;
+    text-align: center;
+  }
+
+  .illustration {
+    padding-bottom: 20px;
+  }
+
+  .text {
+    position: relative;
   }
 }

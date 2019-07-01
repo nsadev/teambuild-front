@@ -10,6 +10,7 @@
 .dashboard-container {
     display: flex;
     width: 100%;
+    align-items: center;
 }
 
 /********************************************
@@ -19,8 +20,10 @@
 .navbar {
     display: flex;
     justify-content: center;
-    padding: 14px;
+    padding-left: 14px;
     letter-spacing: 0.01em;
+    height: 64px;
+    align-items: center;
 }
 
 .navbar__logo {
@@ -70,6 +73,46 @@
 .logo {
     height: 36px;
 }
+
+
+/********************************************
+    FONTS
+*********************************************/
+
+h1 {
+    font-size: 32px;
+    letter-spacing: 0.01em;
+  }
+  
+  h2 {
+    font-size: 26px;
+    letter-spacing: 0.01em;
+  }
+  
+  h3 {
+    font-size: 22px;
+    letter-spacing: 0.01em;
+  }
+  
+  h4 {
+    font-size: 18px;
+    letter-spacing: 0.01em;
+  }
+  
+  @media (max-width: 769px) {
+    p {
+      font-size: 16px;
+    }
+  
+    h2 {
+      font-size: 24px;
+    }
+  
+    h3 {
+      font-size: 20px;
+    }
+  }
+  
 
 /********************************************
     BUTTONS
@@ -129,6 +172,14 @@
     font-weight: 600;
     line-height: 27px;
     cursor: pointer;
+}
+
+@media (max-width: 769px) {
+    .cta-button {
+      padding: 12px 30px;
+      font-size: 18px;
+      line-height: 24px;
+    }
 }
 
 /********************************************
