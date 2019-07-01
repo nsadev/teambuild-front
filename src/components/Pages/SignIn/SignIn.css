@@ -60,3 +60,14 @@
     color: #4eb9f4;
     text-decoration: none;
 }
+
+@media (max-width: 580px) {
+    .signin-container {
+        grid-template-columns: auto;
+    }
+    .signin-window {
+        background-color: transparent;
+        box-shadow: none;
+        width: 100%;
+    }
+}
