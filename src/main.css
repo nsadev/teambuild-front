@@ -282,3 +282,10 @@ h1 {
     display: inline;
     font-size: 10px;
 }
+
+.form-inline {
+    display: inline-block;
+    width: 45%;
+}
+
+

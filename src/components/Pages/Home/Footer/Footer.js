@@ -31,7 +31,7 @@ const Footer = () => (
                 </a>
             </div>
             <div className="footer__copyright">
-                <p>©Copyright {(new Date().getFullYear())}. All rights reserved.</p>
+                <p>Copyright &copy; {(new Date().getFullYear())}. All rights reserved.</p>
             </div>
             {/* <div className="cta-white-outline">
                 <Link className="link" to="/apply">

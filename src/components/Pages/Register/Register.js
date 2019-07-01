@@ -9,6 +9,8 @@ const Register = ({ history }) => {
     const [email, setEmail] = useState(null)
     const [firstname, setFirstname] = useState(null)
     const [lastname, setLastname] = useState(null)
+    const [github, setGithub] = useState(null)
+    const [role, setRole] = useState(null)
     const [password, setPassword] = useState(null)
     const [confPw, setConfPw] = useState(null)
     const [message, setMessage] = useState(null)
@@ -25,6 +27,14 @@ const Register = ({ history }) => {
         setLastname(e.target.value)
     }
 
+    function githubChange(e) {
+        setGithub(e.target.value)
+    }
+
+    function roleChange(e) {
+        setRole(e.target.value)
+    }
+
     function passwordChange(e) {
         setPassword(e.target.value)
     }
@@ -36,7 +46,7 @@ const Register = ({ history }) => {
     const onSubmitRegister = () => {
         //add feedback messages
 
-        if (email && firstname && lastname && password && confPw) {
+        if (email && firstname && lastname && github && role && password && confPw) {
             if (password.length >= 8) {
                 if (password === confPw) {
                     fetch("/user/register", {
@@ -46,6 +56,8 @@ const Register = ({ history }) => {
                             email: email,
                             first_name: firstname,
                             last_name: lastname,
+                            github: github,
+                            role: role,
                             password: password,
                         }),
                     })
@@ -92,27 +104,59 @@ const Register = ({ history }) => {
                             onChange={emailChange}
                         />
 
-                        <label className="form-text-color form-text">
-                            First name
-                        </label>
-                        <input
-                            className="signin-input form-text-color"
-                            type="text"
-                            name="firstname"
-                            id="firstname"
-                            onChange={firstnameChange}
-                        />
 
-                        <label className="form-text-color form-text">
-                            Last name
-                        </label>
-                        <input
-                            className="signin-input form-text-color"
-                            type="text"
-                            name="lastname"
-                            id="lastname"
-                            onChange={lastnameChange}
-                        />
+
+                        <div className="form-inline">
+                            <label className="form-text-color form-text">
+                                First name
+                            </label>
+                            <input
+                                className="signin-input form-text-color"
+                                type="text"
+                                name="firstname"
+                                id="firstname"
+                                onChange={firstnameChange}
+                            />
+                        </div>
+
+                        <div className="form-inline" style={{float: "right"}}>
+                            <label className="form-text-color form-text">
+                                Last name
+                            </label>
+                            <input
+                                className="signin-input form-text-color"
+                                type="text"
+                                name="lastname"
+                                id="lastname"
+                                onChange={lastnameChange}
+                            />
+                        </div>
+
+                        <div className="form-inline">
+                            <label className="form-text-color form-text">
+                                GitHub Account
+                            </label>
+                            <input
+                                className="signin-input form-text-color"
+                                type="text"
+                                name="github"
+                                id="github"
+                                onChange={githubChange}
+                            />
+                        </div>
+
+                        <div className="form-inline" style={{float: "right"}}>
+                            <label className="form-text-color form-text">
+                                Role
+                            </label>
+                            <input
+                                className="signin-input form-text-color"
+                                type="text"
+                                name="role"
+                                id="role"
+                                onChange={roleChange}
+                            />
+                        </div>
 
                         <label className="form-text-color form-text">
                             Password
