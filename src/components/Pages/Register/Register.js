@@ -43,6 +43,7 @@ const Register = ({ history }) => {
         setConfPw(e.target.value)
     }
 
+
     const onSubmitRegister = () => {
         //add feedback messages
 
@@ -147,20 +148,17 @@ const Register = ({ history }) => {
                             Role
                         </label>
 
-                        <select className="signin-input form-text no-bg">
-                            <option value="Designer">Designer</option>
-                            <option value="Front-End">Front-End</option>
-                            <option value="Back-End">Back-End</option>
-                            <option value="Full-Stack">Full-Stack</option>
+                        <select
+                            className="signin-input form-text no-bg"
+                            name="role"
+                            onChange={roleChange}
+                        >
+                            <option>Select role</option>
+                            <option value="Designer" >Designer</option>
+                            <option value="Front-End" >Front-End</option>
+                            <option value="Back-End" >Back-End</option>
+                            <option value="Full-Stack" >Full-Stack</option>
                         </select>
-
-                        {/*<input*/}
-                        {/*    className="signin-input form-text-color"*/}
-                        {/*    type="text"*/}
-                        {/*    name="role"*/}
-                        {/*    id="role"*/}
-                        {/*    onChange={roleChange}*/}
-                        {/*/>*/}
 
                         <div className="form-inline">
                             <label className="form-text-color form-text">

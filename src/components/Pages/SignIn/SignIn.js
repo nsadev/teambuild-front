@@ -58,7 +58,7 @@ const SignIn = () => {
             <div className="blocks-background">
                 <div className="signin-container">
                     <div className="signin-window">
-                        <h1 className="center form-text-color">Sign In</h1>
+                        <h1 className="center form-text-color">Log In</h1>
 
                         <form className="signin-form">
                             <label className="form-text-color form-text">
@@ -90,7 +90,7 @@ const SignIn = () => {
                                     className="cta-button-form"
                                     onClick={submitSignin}
                                 >
-                                    Sign In
+                                    Log In
                                 </a>
                             </div>
                         </form>
