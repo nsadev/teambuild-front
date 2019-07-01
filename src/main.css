@@ -282,3 +282,15 @@ h1 {
     display: inline;
     font-size: 10px;
 }
+
+.form-inline {
+    display: inline-block;
+    width: 45%;
+}
+
+.no-bg {
+    background-color: rgba(255, 255, 255, 0.0);
+}
+
+
+
