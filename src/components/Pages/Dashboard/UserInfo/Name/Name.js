@@ -7,7 +7,7 @@ import pin from "../../../../../static/location_pin.svg"
 
 const Name = ({user}) => {
 
-    console.log(user)
+
 
     return(
         <div>
@@ -17,9 +17,15 @@ const Name = ({user}) => {
             </div>
 
             <div className="user-links" >
-                <a href={user.github} target="_blank"><img src={github} alt="Github Link" /></a>
-                <a href={user.linkedin} target="_blank"><img src={linkedin} alt="Linkedin Link" /></a>
-                <a href={user.website} target="_blank"><img src={website} alt="Website Link" /></a>
+                <a href={user.github} target="_blank"
+                   title={(user.github) ? "Github Page" : "Github is not available"} >
+                    <img src={github} alt="Github Link" /></a>
+                <a href={user.linkedin} target="_blank"
+                   title={(user.linkedin) ? "Linkedin Page" : "Linkedin is not available"} >
+                    <img src={linkedin} alt="Linkedin Link" /></a>
+                <a href={user.website} target="_blank"
+                   title={(user.website) ? "User's website" : "User's website is not available"} >
+                    <img src={website} alt="Website Link" /></a>
             </div>
 
             <div className="location" >
