@@ -22,16 +22,17 @@
 }
 
 .location {
-    width: 130px;
+    width: auto;
 }
 
 .location > img {
     width: 25px;
     height: 25px;
+
 }
 
-.location > p {
-    float: right;
-    margin: auto;
-    font-size: 18px;
+.location > ins {
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: 5px;
 }

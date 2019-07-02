@@ -28,9 +28,10 @@ const Name = ({user}) => {
                     <img src={website} alt="Website Link" /></a>
             </div>
 
+
             <div className="location" >
                 <img src={pin} alt="Location pin" />
-                <p> {user.location} </p>
+                <ins>{(user.location) ? user.location : "Location not available"}</ins>
             </div>
 
 
