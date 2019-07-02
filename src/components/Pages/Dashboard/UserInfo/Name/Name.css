@@ -1,0 +1,37 @@
+
+
+.user-name {
+    width: 200px;
+    float: left;
+    margin: 0;
+    font-weight: bold;
+}
+
+.user-name > p {
+    font-size: 34px;
+    margin: auto;
+}
+
+.user-links {
+    width: 200px;
+    float: left;
+}
+
+.user-links > a {
+    margin-left: 8px;
+}
+
+.location {
+    width: 130px;
+}
+
+.location > img {
+    width: 25px;
+    height: 25px;
+}
+
+.location > p {
+    float: right;
+    margin: auto;
+    font-size: 18px;
+}
