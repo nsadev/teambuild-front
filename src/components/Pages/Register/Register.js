@@ -155,9 +155,9 @@ const Register = ({ history }) => {
                         >
                             <option>Select role</option>
                             <option value="Designer" >Designer</option>
-                            <option value="Front-End" >Front-End</option>
-                            <option value="Back-End" >Back-End</option>
-                            <option value="Full-Stack" >Full-Stack</option>
+                            <option value="Front-End Developer" >Front-End</option>
+                            <option value="Back-End Developer" >Back-End</option>
+                            <option value="Full-Stack Developer" >Full-Stack</option>
                         </select>
 
                         <div className="form-inline">

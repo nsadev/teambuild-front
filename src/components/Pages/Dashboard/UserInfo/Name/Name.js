@@ -34,6 +34,8 @@ const Name = ({user}) => {
                 <ins>{(user.location) ? user.location : "Location not available"}</ins>
             </div>
 
+            <hr></hr>
+
 
         </div>
     )
