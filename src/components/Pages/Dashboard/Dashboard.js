@@ -68,10 +68,10 @@ const Dashboard = () => {
 
 
 
-                <div id="profile-container">
-                    <UserPicture user={user}/>
-                    <UserInfo user={user} />
-                </div>
+                    <div id="profile-container">
+                        <UserPicture user={user}/>
+                        <UserInfo user={user} />
+                    </div>
 
                 </DashboardContent>
                 <DashboardFooter />

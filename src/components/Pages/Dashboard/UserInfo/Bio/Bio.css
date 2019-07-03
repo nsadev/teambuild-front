@@ -1,0 +1,13 @@
+
+
+.user-info-field {
+    margin-bottom: 25px;
+}
+
+.user-info-field > p {
+    text-align: justify;
+    float: right;
+    width: 80%;
+    margin: 0 1%;
+}
+
