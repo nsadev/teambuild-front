@@ -10,6 +10,8 @@ import auth from "../../../utils/Auth"
 import "./Dashboard.css"
 import "../../../main.css"
 
+import Uploader from "./_Uploader/Uploader"
+
 const Dashboard = () => {
     const [user, setUser] = useState(undefined)
     const [loading, setLoading] = useState(true)
@@ -72,6 +74,8 @@ const Dashboard = () => {
                         <UserPicture user={user}/>
                         <UserInfo user={user} />
                     </div>
+
+                    <Uploader user={user} />
 
                 </DashboardContent>
                 <DashboardFooter />
