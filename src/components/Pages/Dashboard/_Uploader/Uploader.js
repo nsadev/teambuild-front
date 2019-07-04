@@ -20,13 +20,12 @@ const Uploader = ({user}) => {
 
             const data = new FormData()
 
-            data.append('email', user.email)
             data.append('file', image)
+            data.append('email', user.email)
 
+            // Sending binary and JSON data in the same time
+            axios.post("/user/fileupload", data, {})
 
-            axios.post("/user/fileupload", data, {
-
-            }).then(resp => console.log(resp.statusText))
 
         } else {
             console.log("No file")
