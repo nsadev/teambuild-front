@@ -24,7 +24,9 @@ const Uploader = ({user}) => {
             data.append('email', user.email)
 
             // Sending binary and JSON data in the same time
-            axios.post("/user/fileupload", data, {})
+            axios.post("/user/fileupload", data, {}).then(res => {
+                console.log(res.statusText)
+            })
 
 
         } else {
