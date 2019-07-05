@@ -15,7 +15,6 @@ const Uploader = ({user}) => {
 
     function onSubmit() {
 
-
         if(image != null){
 
             const data = new FormData()
@@ -24,10 +23,10 @@ const Uploader = ({user}) => {
             data.append('email', user.email)
 
             // Sending binary and JSON data in the same time
-            axios.post("/user/picture", data, {}).then(res => {
+            axios.post("/user/picture", data, {})
+                .then(res => {
                 console.log(res.statusText)
             })
-
 
         } else {
             console.log("No file")
@@ -37,7 +36,7 @@ const Uploader = ({user}) => {
 
     return(
         <div>
-            Temporary image uploader: 
+            Temporary image uploader:
             <input type="file" name="picture" onChange={imageUploader} />
             <button type="button" onClick={onSubmit} >Upload</button>
         </div>

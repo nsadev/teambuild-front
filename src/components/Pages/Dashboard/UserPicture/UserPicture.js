@@ -20,8 +20,6 @@ const UserPicture = ({user}) => {
     // The image is ready to use as a correct image source
     const imgSrc = `data:image/jpeg;base64,${bin}`
 
-
-
     return(
         <div className="img-container" >
             <img className="image" src={imgSrc} width="300" height="300"/>
