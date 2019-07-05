@@ -24,7 +24,7 @@ const Uploader = ({user}) => {
             data.append('email', user.email)
 
             // Sending binary and JSON data in the same time
-            axios.post("/user/fileupload", data, {}).then(res => {
+            axios.post("/user/picture", data, {}).then(res => {
                 console.log(res.statusText)
             })
 
@@ -37,6 +37,7 @@ const Uploader = ({user}) => {
 
     return(
         <div>
+            Temporary image uploader: 
             <input type="file" name="picture" onChange={imageUploader} />
             <button type="button" onClick={onSubmit} >Upload</button>
         </div>
