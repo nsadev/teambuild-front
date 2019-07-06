@@ -1,0 +1,50 @@
+
+
+.user-name {
+    width: auto;
+    float: left;
+    margin: 0;
+    font-weight: bold;
+}
+
+.user-name > p {
+    font-size: 30px;
+    margin: auto;
+}
+
+.user-links {
+    width: 200px;
+    height: 50px;
+    margin-left: 15px;
+    float: left;
+}
+
+.user-links > a {
+    margin-left: 8px;
+}
+
+.user-links img {
+    width: 35px;
+    height: 35px;
+}
+
+.location {
+    width: 350px;
+}
+
+.location > img {
+    width: 25px;
+    height: 25px;
+
+}
+
+.location > ins {
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+hr {
+    opacity: 0.5;
+    margin: 20px 0 40px 0;
+}

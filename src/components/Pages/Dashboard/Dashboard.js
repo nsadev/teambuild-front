@@ -4,9 +4,13 @@ import DashboardFooter from "./DashboardFooter/DashboardFooter"
 import DashboardContent from "./DashboardContent/DashboardContent"
 import NewProject from "../NewProject/NewProject"
 import Projects from "../Projects/Projects"
+import UserPicture from "./UserPicture/UserPicture"
+import UserInfo from "./UserInfo/UserInfo"
 import auth from "../../../utils/Auth"
 import "./Dashboard.css"
 import "../../../main.css"
+
+import Uploader from "./_Uploader/Uploader"
 
 const Dashboard = () => {
     const [user, setUser] = useState(undefined)
@@ -62,7 +66,17 @@ const Dashboard = () => {
                     sideNavStyle={sideNavStyle}
                     sideNavTextStyle={sideNavTextStyle}
                 >
-                    <NewProject user={user} />
+                    {/*<NewProject user={user} />*/}
+
+
+
+                    <div id="profile-container">
+                        <UserPicture user={user}/>
+                        <UserInfo user={user} />
+                    </div>
+
+                    <Uploader user={user} />
+
                 </DashboardContent>
                 <DashboardFooter />
             </div>

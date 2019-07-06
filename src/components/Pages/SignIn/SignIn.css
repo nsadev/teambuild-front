@@ -49,14 +49,24 @@
 
 .form-text {
     font-size: 18px;
-    color: #666;
 }
 
 .form-text-color {
-    color: #333;
+    color: #666;
 }
 
 .signin-footer > a {
     color: #4eb9f4;
     text-decoration: none;
+}
+
+@media (max-width: 580px) {
+    .signin-container {
+        grid-template-columns: auto;
+    }
+    .signin-window {
+        background-color: transparent;
+        box-shadow: none;
+        width: 100%;
+    }
 }

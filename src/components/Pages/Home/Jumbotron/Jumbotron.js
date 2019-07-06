@@ -15,12 +15,13 @@ const Jumbotron = () => (
         <div className="jumbo-container">
             <div className="jumbotron">
                 <div className="jumbo-title jumbo">
-                    Build something <ins>awesome</ins>.
+                    <h2>Build something <ins>awesome</ins>.</h2>
                 </div>
                 <p className="jumbo-text jumbo">
-                    Are you ready to start open sourcing but lack participation?
-                    Are you looking for a team for a pet project? Do you want to
-                    gain experience working with teams from all over?
+                Want to start contributing to open source or looking for a team for a pet project? 
+                <span className="jumbo-bold"> Teambuild is your answer.</span>
+                <br></br>
+                Sign up and gain experience working with teams from all over the world!
                 </p>
                 <div>
                     <GetStartedButton />
