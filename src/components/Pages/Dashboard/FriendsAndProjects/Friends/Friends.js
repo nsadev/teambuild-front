@@ -23,11 +23,11 @@ const Friends = () => {
                 <span>view all</span>
             </div>
 
-            <div>
+            <div className='friends-list'>
                 {
                     (friends !== null)
                     ? friends.map( friend => (
-                        <div key={friend.friend_id}>
+                        <div className='friend-avatar' key={friend.friend_id}>
                             {friend.first_name}
                             {friend.last_name}
                         </div>

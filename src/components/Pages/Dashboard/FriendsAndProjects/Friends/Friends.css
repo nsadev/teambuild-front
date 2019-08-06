@@ -1,5 +1,6 @@
 .friends-container {
     margin: 50px 50px 50px 200px;
+    width: 30%;
 }
 
 .friends-title {
@@ -13,4 +14,12 @@
 .friends-title > span {
     margin-left: 10px;
     vertical-align: bottom;
+}
+
+.friends-list {
+    display: flex;
+}
+
+.friend-avatar {
+    margin: 10px;
 }
