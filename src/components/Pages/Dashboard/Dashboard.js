@@ -75,7 +75,7 @@ const Dashboard = () => {
                         <UserInfo user={user} />
                     </div>
 
-                    <Uploader user={user} />
+                    {/*<Uploader user={user} />*/}
 
                 </DashboardContent>
                 <DashboardFooter />
