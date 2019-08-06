@@ -9,8 +9,10 @@ import UserInfo from "./UserInfo/UserInfo"
 import auth from "../../../utils/Auth"
 import "./Dashboard.css"
 import "../../../main.css"
+import FriendsAndProjects from "./FriendsAndProjects/FriendsAndProjects"
 
 import Uploader from "./_Uploader/Uploader"
+
 
 const Dashboard = () => {
     const [user, setUser] = useState(undefined)
@@ -76,6 +78,8 @@ const Dashboard = () => {
                     </div>
 
                     {/*<Uploader user={user} />*/}
+
+                    <FriendsAndProjects />
 
                 </DashboardContent>
                 <DashboardFooter />

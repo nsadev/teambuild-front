@@ -1,5 +1,5 @@
-friends-project-container {
+.friends-project-container {
     display: flex;
     margin: 0;
-
+    background-color: #f2f5fa;
 }

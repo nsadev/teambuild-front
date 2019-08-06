@@ -1,0 +1,16 @@
+.friends-container {
+    margin: 50px 50px 50px 200px;
+}
+
+.friends-title {
+    display: flex;
+}
+
+.friends-title > h4 {
+    margin: 0;
+}
+
+.friends-title > span {
+    margin-left: 10px;
+    vertical-align: bottom;
+}
