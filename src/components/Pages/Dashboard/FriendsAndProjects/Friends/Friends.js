@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
+import {Link} from 'react-router-dom'
 import './Friends.css'
-import auth from "../../../../../utils/Auth"
+import '../../../../../main.css'
+
 
 const Friends = () => {
 
@@ -19,18 +21,17 @@ const Friends = () => {
         <div className='friends-container'>
 
             <div className='friends-title'>
-                <h4>Friends</h4>
-                <span>view all</span>
+                <div className='title-title'>Friends</div>
+                <Link className='title-expand link blue' to='#'>view all</Link>
             </div>
 
             <div className='friends-list'>
                 {
                     (friends !== null)
                     ? friends.map( friend => (
-                        <div className='friend-avatar' key={friend.friend_id}>
-                            {friend.first_name}
-                            {friend.last_name}
-                        </div>
+                        <Link className='friend-avatar' key={friend.friend_id} to='#'>
+                            {friend.first_name} {friend.last_name}
+                        </Link>
                         ))
                     : <p>You dont have any friends yet</p>
 

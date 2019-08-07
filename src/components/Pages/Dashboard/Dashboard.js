@@ -75,6 +75,7 @@ const Dashboard = () => {
                     <div id="profile-container">
                         <UserPicture user={user}/>
                         <UserInfo user={user} />
+
                     </div>
 
                     {/*<Uploader user={user} />*/}

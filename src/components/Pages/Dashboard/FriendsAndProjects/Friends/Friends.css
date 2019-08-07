@@ -1,19 +1,21 @@
 .friends-container {
-    margin: 50px 50px 50px 200px;
+    margin: 50px 50px 50px 5%;
     width: 30%;
 }
 
 .friends-title {
     display: flex;
+
 }
 
-.friends-title > h4 {
+.friends-title > .title-title {
     margin: 0;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-.friends-title > span {
+.friends-title > .title-expand {
     margin-left: 10px;
-    vertical-align: bottom;
 }
 
 .friends-list {
@@ -21,5 +23,8 @@
 }
 
 .friend-avatar {
-    margin: 10px;
+    margin: 10px 10px 10px 0;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
 }
