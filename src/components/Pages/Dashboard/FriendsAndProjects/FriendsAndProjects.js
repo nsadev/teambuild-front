@@ -6,7 +6,7 @@ const FriendsAndProjects = () => {
     return (
         <div className='friends-project-container'>
             <Friends />
-            
+
         </div>
     )
 }

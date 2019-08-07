@@ -13,7 +13,6 @@ const Friends = () => {
             .then(res => res.json())
             .then(user => {
                 setFriends(user)
-                console.log(user)
             })
     }, [])
 
