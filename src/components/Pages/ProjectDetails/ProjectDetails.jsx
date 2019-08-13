@@ -8,14 +8,14 @@ import ProjectApplication from "./ProjectApplication/ProjectApplication"
 import ProjectFooter from "./ProjectFooter/ProjectFooter"
 
 
-const ProjectDetails = () => {
+const ProjectDetails = ({id = 3}) => {
   const [ currentProject, setCurrentProject ] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:5000/project')
-    .then(res => console.log(res.json()))
+    fetch(`http://localhost:5000/project/${id}`)
+    .then(res => res.json())
     .then(project => {
-      setCurrentProject(project)
+      setCurrentProject(project[0])
     })
   }, []);
 

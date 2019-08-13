@@ -22,7 +22,7 @@ const ProjectInfo = ({ project }) => {
       </div>
     )
   } else {
-    return <Loader />
+    return <div className='content'><Loader /></div>
   }
 }
 
