@@ -1,6 +1,5 @@
 import React from "react"
 import "./ProjectDetails.css"
-import "../../../main.css"
 import ProjectNavbar from "./ProjectNavbar/ProjectNavbar"
 import ProjectInfo from "./ProjectInfo/ProjectInfo"
 import ProjectTechStack from "./ProjectTechStack/ProjectTechStack"
@@ -13,11 +12,13 @@ const ProjectDetails = () => {
     return (
         <div>
           <ProjectNavbar />
-          {/* <ProjectInfo />
-          <ProjectTechStack />
-          <ProjectContributors />
-          <ProjectApplication />
-          <ProjectFooter /> */}
+          <div className="inner-container">
+            <ProjectInfo name='Project Name' />
+            <ProjectTechStack />
+            <ProjectContributors />
+            <ProjectApplication />
+            <ProjectFooter />
+          </div>
         </div>
     )
 }

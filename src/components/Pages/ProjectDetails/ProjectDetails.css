@@ -1,12 +1,5 @@
-.background {
-  position: relative;
+.inner-container {
+  padding-top: 75px;
+  margin-left: 100px;
+  padding-bottom: 75px;
 }
-
-.content-box {
-  position: absolute;
-  z-index: 5;
-  top: 100px;
-  width: 100%;
-}
-
-/* Write your code below */

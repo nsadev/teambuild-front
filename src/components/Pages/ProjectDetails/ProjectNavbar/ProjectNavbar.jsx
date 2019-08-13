@@ -47,7 +47,7 @@ const Navbar = () => {
                       >
                           All Projects
                       </Link>
-                      <Link className="link" to="/apply">
+                      <Link className="link" to="/">
                           <a
                               className="navbar__links__link link blue"
                               href="#"
