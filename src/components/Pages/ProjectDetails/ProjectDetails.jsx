@@ -11,21 +11,26 @@ import ProjectFooter from "./ProjectFooter/ProjectFooter"
 const ProjectDetails = () => {
   const [ currentProject, setCurrentProject ] = useState(null);
 
-  // useEffect(() => {
-  //   fetch()
-  // })
-    return (
-        <div>
-          <ProjectNavbar />
-          <div className="inner-container">
-            <ProjectInfo name='Project Name' />
-            {/* <ProjectTechStack /> */}
-            <ProjectContributors />
-            <ProjectApplication />
-            <ProjectFooter />
-          </div>
-        </div>
-    )
+  useEffect(() => {
+    fetch('http://localhost:5000/project')
+    .then(res => console.log(res.json()))
+    .then(project => {
+      setCurrentProject(project)
+    })
+  }, []);
+
+  return (
+    <div>
+      <ProjectNavbar />
+      <div className="inner-container">
+        <ProjectInfo project={currentProject} />
+        {/* <ProjectTechStack /> */}
+        <ProjectContributors />
+        <ProjectApplication />
+        <ProjectFooter />
+      </div>
+    </div>
+  )
 }
 
 export default ProjectDetails
