@@ -14,8 +14,8 @@
 }
 
 .info {
-  width: 320px;
-  height: 320px;
+  width: 40vw;
+  height: 40vh;
   overflow:scroll;
   line-height: 2rem;
 }
