@@ -8,24 +8,29 @@ import ProjectApplication from "./ProjectApplication/ProjectApplication"
 import ProjectFooter from "./ProjectFooter/ProjectFooter"
 
 
-const ProjectDetails = () => {
+const ProjectDetails = ({id = 3}) => {
   const [ currentProject, setCurrentProject ] = useState(null);
 
-  // useEffect(() => {
-  //   fetch()
-  // })
-    return (
-        <div>
-          <ProjectNavbar />
-          <div className="inner-container">
-            <ProjectInfo name='Project Name' />
-            {/* <ProjectTechStack /> */}
-            <ProjectContributors />
-            <ProjectApplication />
-            <ProjectFooter />
-          </div>
-        </div>
-    )
+  useEffect(() => {
+    fetch(`http://localhost:5000/project/${id}`)
+    .then(res => res.json())
+    .then(project => {
+      setCurrentProject(project[0])
+    })
+  }, []);
+
+  return (
+    <div>
+      <ProjectNavbar />
+      <div className="inner-container">
+        <ProjectInfo project={currentProject} />
+        {/* <ProjectTechStack /> */}
+        <ProjectContributors />
+        <ProjectApplication />
+        <ProjectFooter />
+      </div>
+    </div>
+  )
 }
 
 export default ProjectDetails
