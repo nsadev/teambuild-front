@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import "./ProjectDetails.css"
+import { ReactComponent as Loader } from '../../../static/loader.svg';
 import ProjectNavbar from "./ProjectNavbar/ProjectNavbar"
 import ProjectInfo from "./ProjectInfo/ProjectInfo"
 import ProjectTechStack from "./ProjectTechStack/ProjectTechStack"
@@ -8,7 +9,7 @@ import ProjectApplication from "./ProjectApplication/ProjectApplication"
 import ProjectFooter from "./ProjectFooter/ProjectFooter"
 
 
-const ProjectDetails = ({id = 3}) => {
+const ProjectDetails = ({id = 16}) => {
   const [ currentProject, setCurrentProject ] = useState(null);
 
   useEffect(() => {
@@ -19,18 +20,23 @@ const ProjectDetails = ({id = 3}) => {
     })
   }, []);
 
-  return (
-    <div>
-      <ProjectNavbar />
-      <div className="inner-container">
-        <ProjectInfo project={currentProject} />
-        {/* <ProjectTechStack /> */}
-        <ProjectContributors />
-        <ProjectApplication />
-        <ProjectFooter />
+  if (currentProject) {
+    const tech_stack = JSON.parse(currentProject.tech_stack)
+    return (
+      <div>
+        <ProjectNavbar />
+        <div className="inner-container">
+          <ProjectInfo project={currentProject} />
+          <ProjectTechStack tech_stack={tech_stack} />
+          <ProjectContributors />
+          <ProjectApplication />
+          <ProjectFooter />
+        </div>
       </div>
-    </div>
-  )
+    )
+  } else {
+    return <div className='content'><Loader /></div>
+  }
 }
 
 export default ProjectDetails
