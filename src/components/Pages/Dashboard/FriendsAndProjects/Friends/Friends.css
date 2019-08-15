@@ -1,0 +1,31 @@
+.friends-container {
+    margin: 50px 50px 50px 5%;
+    width: 30%;
+}
+
+.friends-title {
+    display: flex;
+
+}
+
+.friends-title > .title-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.friends-title > .title-expand {
+    margin-left: 10px;
+    padding-top: 4px;
+    font-weight: unset;
+}
+
+.friends-list {
+    display: flex;
+}
+
+.friend-avatar {
+    margin: 10px 10px 10px 0;
+    text-decoration: none;
+    color: black;
+}

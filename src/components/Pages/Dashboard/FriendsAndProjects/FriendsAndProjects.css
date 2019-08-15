@@ -1,0 +1,6 @@
+.friends-project-container {
+    width: 100vw;
+    display: flex;
+    justify-content: left;
+    background-color: #f2f5fa;
+}
